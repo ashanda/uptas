@@ -211,6 +211,7 @@ Template Name: About
         <div class="bot_ban_capt">
           <h2 class="mb-3">We Will Be Glad To Hear From You</h2>
           <span>It Is A Long Establish Fact That A Reader Will Be Distracted By The Readable Content Of A Page When Looking At Its Layout.</span>
+          <br>
           <a href="#" class="btn btn-primary mt-5">CONTACT US</a>
         </div>
       </div>
