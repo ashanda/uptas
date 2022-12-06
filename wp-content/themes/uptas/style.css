@@ -706,7 +706,7 @@ Use it to make something cool, have fun, and share what you've learned.
 	  text-align: center;
 	}
 	.card2,
-	.card3{
+	.card3 {
 	  margin-top: 10px;
 	}
   }
@@ -793,6 +793,7 @@ Use it to make something cool, have fun, and share what you've learned.
   }
   
   /* About us page css */
+  /* ************************************************************************** */
   /* ----------------------------------------------------default banner------------------------------------------------------ */
   .default_banner {
 	padding: 50px 0;
@@ -946,3 +947,118 @@ Use it to make something cool, have fun, and share what you've learned.
 	}
   }
   
+  /* shedule  page css */
+  
+  /* ----------------------------------------------------shed_banner------------------------------------------------------ */
+  .shed_banner {
+	background-color: #1979a5;
+	padding: 50px 10%;
+  }
+  .shed_ban_cap {
+  }
+  .shed_banner h1,
+  .shed_banner h2,
+  .shed_banner p {
+	color: #fff;
+  }
+  .table_sec {
+	padding: 0 50px;
+  }
+  .table_sec .table-bordered {
+	background-color: #dde5ef !important;
+	border-color: #fff !important;
+	margin-top: 30px;
+  }
+  .table_sec .table-bordered caption {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+  }
+  .table_sec th {
+	text-align: center;
+  }
+  .table_sec td {
+	vertical-align: middle;
+	text-align: center;
+  }
+  .lvl_show .yel_box {
+	width: 30px;
+	height: 30px;
+	background-color: yellow;
+	margin-right: 15px;
+	margin-bottom: 10px;
+  }
+  .lvl_show .gre_box {
+	width: 30px;
+	height: 30px;
+	background-color: green;
+	margin-right: 15px;
+  }
+  .lvl_show td {
+	text-align: left;
+  }
+  .single-table {
+	overflow-x: scroll;
+  }
+  @media screen and (max-width: 567px) {
+	.table_sec {
+	  padding: 0;
+	}
+  }
+  /* table_bot_sec */
+  .table_bot_sec .caption {
+	background-color: #6183e4;
+  }
+  .table_bot_sec .caption {
+	padding: 30px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+  }
+  .table_bot_sec .caption span {
+	color: #fff;
+	font-size: 20px;
+  }
+  .table_bot_points li{
+	list-style-type: initial;
+	padding-top: 20px;
+  }
+  .table_bot_btn .btn{
+	border-radius: 0;
+  }
+  /* ************************************************************************** */
+  
+  /*----------------------------------FAQ Page Start-----------------------------------------------------------------------------*/
+  h5.heading-questioner {
+	font-size: 18px;
+	margin-top: 65px;
+	font-weight: 700;
+	border-bottom: 1px solid black;
+	width: 204px;
+	padding-bottom: 10px;
+  }
+  
+  h6.title {
+	font-size: 16px;
+	font-weight: 500;
+	margin-top: 10px;
+	margin-bottom: 20px;
+  }
+  
+  p.para {
+	font-size: 14px;
+	text-align: justify;
+  }
+  
+  @media screen and (max-width: 567px) {
+	h5.heading-questioner {
+	  font-size: 16px;
+	}
+  
+	h6.title {
+	  font-size: 14px;
+	}
+  
+	p.para {
+	  font-size: 13px;
+	}
+  }
+  /*----------------------------------FAQ Page End-----------------------------------------------------------------------------*/
