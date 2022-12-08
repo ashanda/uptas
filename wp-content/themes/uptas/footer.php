@@ -15,7 +15,9 @@
     <div class="row last-row my-3">
       <div class="col-sm-6">
         <div class="footer_logo">
-          <img src="<?php echo get_template_directory_uri(); ?>/inc/img/uptas logo.svg" alt="" />
+        <?php if( get_field('footer_logo','option') ): ?>
+              <img src="<?php the_field('footer_logo','option'); ?>" alt="uptas" />
+          <?php endif; ?>
         </div>
       </div>
       <div class="col-sm-6">
@@ -30,9 +32,7 @@
   <!-- Main wrapper end -->
   <!-- Boostrap js -->
 
-  <script>
-    AOS.init();
-  </script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

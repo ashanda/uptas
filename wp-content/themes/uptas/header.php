@@ -51,7 +51,11 @@
       <!-- start navigation bar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/inc/img/uptas logo.svg" alt="" /></a>
+          <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
+          <?php if( get_field('header_logo','option') ): ?>
+              <img src="<?php the_field('header_logo','option'); ?>" alt="uptas" />
+          <?php endif; ?>
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -80,15 +84,15 @@
               <div class="contact-details">
                 <img src="<?php echo get_template_directory_uri(); ?>/inc/img/phone icon.svg" alt="Phone" />
                 <div class="contact-no">
-                  <p>(+114) 253 251</p>
-                  <p>(+114) 253 251</p>
+                  <p><?php the_field('conatct_number_01','option');?></p>
+                  <p><?php the_field('conatct_number_02','option');?></p>
                 </div>
               </div>
 
               <div class="nav-button">
-                <button class="btn btn-outline-success" type="submit">
-                  GET QUOTE
-                </button>
+              <a class="btn btn-outline-success" href="<?php the_field('header_button_link','option');?>" role="button">
+                <?php the_field('header_button_text','option');?>
+              </a>
               </div>
             </form>
           </div>
