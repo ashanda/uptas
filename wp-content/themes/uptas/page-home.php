@@ -16,30 +16,32 @@ Template Name: Home
           aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner container">
-        <div class="carousel-item active">
-          <img src="<?php echo get_template_directory_uri(); ?>/inc/img/main_human.png" class="d-block" alt="..." />
-          <div class="carousel-caption d-block">
-            <h6>Comprehensive Chemistry Support with AI Technoogy</h6>
-            <h1>The Guarantor of your Success</h1>
-            <p>Singapore Best chemistry Learning Center - slide 1</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="<?php echo get_template_directory_uri(); ?>/inc/img/Singapore-Chemistry-Academy- Dr-1.png" class="d-block" alt="..." />
-          <div class="carousel-caption d-block">
-            <h6>Comprehensive Chemistry Support with AI Technoogy</h6>
-            <h1>The Guarantor of your Success</h1>
-            <p>Singapore Best chemistry Learning Center - slide 2</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="<?php echo get_template_directory_uri(); ?>/inc/img/main_human.png" class="d-block" alt="..." />
-          <div class="carousel-caption d-block">
-            <h6>Comprehensive Chemistry Support with AI Technoogy</h6>
-            <h1>The Guarantor of your Success</h1>
-            <p>Singapore Best chemistry Learning Center - slide 3</p>
-          </div>
-        </div>
+      <?php if( have_rows('home_banner') ): 
+        $i=0;
+        $active;
+        ?>
+          
+          <?php while( have_rows('home_banner') ): the_row(); 
+              $image = get_sub_field('banner_image');
+              if($i==0){
+                $active = 'active';
+              }else{
+                $active = '';
+              }
+              ?>
+              <div class="carousel-item <?php echo $active;?>">
+                <img src="<?php echo $image['url'];?>" class="d-block" alt="..." />
+                <div class="carousel-caption d-block">
+                  <h6><?php the_sub_field('sub_title'); ?></h6>
+                  <h1><?php the_sub_field('main_title'); ?></h1>
+                  <p><?php the_sub_field('description'); ?></p>
+                </div>
+              </div>
+          <?php 
+        $i++;
+        endwhile; ?>
+          
+      <?php endif; ?>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
         data-bs-slide="prev">
@@ -62,42 +64,23 @@ Template Name: Home
     <div class="container">
       <div class="card-set">
         <div class="row justify-content-center">
-          <div class="card card1">
-            <div class="card-body">
-              <h5 class="card-title">PhD Doctorate Scholar Super Tutor</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euis- mod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat. Ut wisi enim ad minim veniam.
-              </p>
-            </div>
-          </div>
-
-          <div class="card card2">
-            <div class="card-body">
-              <h5 class="card-title">
-                Chemistry Lab offline inside the institute
-              </h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euis- mod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat. Ut wisi enim ad minim veniam.
-              </p>
-            </div>
-          </div>
-
-          <div class="card card3">
-            <div class="card-body">
-              <h5 class="card-title">
-                Adaptive Learning Smart Learning System (AI LMS)
-              </h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euis- mod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat. Ut wisi enim ad minim veniam.
-              </p>
-            </div>
-          </div>
+        <?php if( have_rows('banner_bottom_cards') ):
+          $i=1;
+           ?>
+            <?php while( have_rows('banner_bottom_cards') ): the_row(); ?>
+                  <div class="card card<?php echo $i;?>">
+                    <div class="card-body">
+                      <h5 class="card-title"><?php the_sub_field('title'); ?></h5>
+                      <p class="card-text">
+                      <?php the_sub_field('caption'); ?>
+                      </p>
+                    </div>
+                  </div>
+                
+            <?php $i++;
+          endwhile; ?>
+           
+        <?php endif; ?>
         </div>
       </div>
     </div>
@@ -108,50 +91,27 @@ Template Name: Home
   <div class="learning section" id="learning">
     <div class="container">
       <div class="learning-heading text-center">
-        <h4>LEARNING STREAMS</h4>
-        <h2>We Work in Such Directions</h2>
+        <h4><?php the_field('section_01_sub_title');?></h4>
+        <h2><?php the_field('section_01_title');?></h2>
         <div id="borderLeft"></div>
       </div>
       <div class="row">
+      <?php if( have_rows('section_01_blocks') ): 
+        $i=1;
+        ?>
+        <?php while( have_rows('section_01_blocks') ): the_row(); ?>
         <div class="col-md-3 col-sm-3">
           <div class="learning-content">
-            <h2>01. <span>O' Level Chemistry</span></h2>
+            <h2>0<?php echo $i;?>. <span><?php the_sub_field('title'); ?></span></h2>
           </div>
           <p class="sub-content">
-            n publishing and graphic design, Lorem ipsum is a placeholder text
-            ...
+             <?php the_sub_field('caption'); ?>
           </p>
         </div>
-
-        <div class="col-md-3 col-sm-3">
-          <div class="learning-content">
-            <h2>01. <span>O' Level Chemistry</span></h2>
-          </div>
-          <p class="sub-content">
-            n publishing and graphic design, Lorem ipsum is a placeholder text
-            ...
-          </p>
-        </div>
-
-        <div class="col-md-3 col-sm-3">
-          <div class="learning-content">
-            <h2>01. <span>O' Level Chemistry</span></h2>
-          </div>
-          <p class="sub-content">
-            n publishing and graphic design, Lorem ipsum is a placeholder text
-            ...
-          </p>
-        </div>
-
-        <div class="col-md-3 col-sm-3">
-          <div class="learning-content">
-            <h2>01. <span>O' Level Chemistry</span></h2>
-          </div>
-          <p class="sub-content">
-            n publishing and graphic design, Lorem ipsum is a placeholder text
-            ...
-          </p>
-        </div>
+          <?php 
+        $i++;
+        endwhile; ?>
+      <?php endif; ?>
       </div>
     </div>
   </div>
@@ -163,66 +123,39 @@ Template Name: Home
       <div class="row mt-4">
         <div class="col-sm-6">
           <div class="work-details">
-            <h4>LEARNING STREAMS</h4>
-            <h2>We Work in Such Directions</h2>
+            <h4><?php the_field('section_01_sub_section_sub_title');?></h4>
+            <h2><?php the_field('section_01_sub_section_title');?></h2>
             <p>
-              We provide qualified Chemistry assistance for your university
-              en- trance exam. For the time of our work, we have helped our
-              Students resolve the most challenging subject issues, as
-              evidenced by positive feedback.
+            <?php the_field('section_01_sub_section_caption');?>
             </p>
           </div>
 
           <div class="row mt-3">
             <div class="col-sm-6">
               <div class="individuals">
-                <p class="ind_title">Services for individuals:</p>
-                <div class="work-list">
-                  <i class="fa fa-check"></i>
-                  <p>Lorem Lorem ipsum</p>
-                </div>
-
-                <div class="work-list">
-                  <i class="fa fa-check"></i>
-                  <p>Lorem Lorem ipsum</p>
-                </div>
-
-                <div class="work-list">
-                  <i class="fa fa-check"></i>
-                  <p>Lorem Lorem ipsum</p>
-                </div>
-
-                <div class="work-list">
-                  <i class="fa fa-check"></i>
-                  <p>Lorem Lorem ipsum</p>
-                </div>
-
-                <div class="work-list">
-                  <i class="fa fa-check"></i>
-                  <p>Lorem Lorem ipsum</p>
-                </div>
+                <p class="ind_title"><?php the_field('section_01_sub_section_left_title');?>:</p>
+                <?php if( have_rows('key_points_left') ): ?>
+                    <?php while( have_rows('key_points_left') ): the_row();?>
+                    <div class="work-list">
+                      <i class="fa fa-check"></i>
+                      <p><?php the_sub_field('points'); ?></p>
+                    </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
               </div>
             </div>
 
             <div class="col-sm-6">
               <div class="group">
-                <p class="ind_title">For Group entities:</p>
-                <div class="work-list">
-                  <i class="fa fa-check"></i>
-                  <p>Lorem Lorem ipsum</p>
-                </div>
-                <div class="work-list">
-                  <i class="fa fa-check"></i>
-                  <p>Lorem Lorem ipsum</p>
-                </div>
-                <div class="work-list">
-                  <i class="fa fa-check"></i>
-                  <p>Lorem Lorem ipsum</p>
-                </div>
-                <div class="work-list">
-                  <i class="fa fa-check"></i>
-                  <p>Lorem Lorem ipsum</p>
-                </div>
+                <p class="ind_title"><?php the_field('section_01_sub_section_right_title');?>:</p>
+                <?php if( have_rows('key_points_right') ): ?>
+                    <?php while( have_rows('key_points_right') ): the_row();?>
+                    <div class="work-list">
+                      <i class="fa fa-check"></i>
+                      <p><?php the_sub_field('points'); ?></p>
+                    </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
               </div>
             </div>
           </div>
@@ -230,7 +163,10 @@ Template Name: Home
 
         <div class="col-sm-6">
           <div class="work-img text-center">
-            <img class="img-fluid blue_shadow" src="<?php echo get_template_directory_uri(); ?>/inc/img/male student.png" alt="malestudent" />
+          <?php if( get_field('section_01_sub_section_right_image') ): ?>
+              <img class="img-fluid blue_shadow" src="<?php the_field('section_01_sub_section_right_image'); ?>" alt="malestudent" />
+          <?php endif; ?>
+           
           </div>
         </div>
       </div>
@@ -239,117 +175,7 @@ Template Name: Home
   <!-- work section end -->
   <!-- TESTIMONIALS section start -->
 
-
-  <!-- TESTIMONIALS section end -->
-  <div class="testi section" id="testi">
-    <div class="container">
-      <div class="testi-heading text-center">
-        <h4>LEARNING STREAMS</h4>
-        <h2>We Work in Such Directions</h2>
-        <p>They have already used our services.</p>
-        <div id="borderbottom"></div>
-      </div>
-      <div class="testi-content py-3">
-        <div class="owl-carousel owl-theme">
-          <div class="item">
-            <div class="content">
-              <table>
-                <tr>
-                  <td class="p-3">
-                    <img class="owl_img" src="<?php echo get_template_directory_uri(); ?>/inc/img/owl_img.png" alt="" />
-                  </td>
-                  <td class="p-3">
-                    <span class="owl_cap">Sally (TKGS, VJC) 1</span>
-                    <span>&#11088;</span><span>&#11088;</span><span>&#11088;</span><span>&#11088;</span><span>&#11088;</span>
-                  </td>
-                </tr>
-              </table>
-              <div class="owl_text">
-                Lessons in Uptas are interesting and engaging as the tutors
-                tries his best to simplify chemistry concepts..
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="content">
-              <table>
-                <tr>
-                  <td class="p-3">
-                    <img class="owl_img" src="<?php echo get_template_directory_uri(); ?>/inc/img/owl_img.png" alt="" />
-                  </td>
-                  <td class="p-3">
-                    <span class="owl_cap">Sally (TKGS, VJC)</span>
-                    <span>&#11088;</span><span>&#11088;</span><span>&#11088;</span><span>&#11088;</span><span>&#11088;</span>
-                  </td>
-                </tr>
-              </table>
-              <div class="owl_text">
-                Lessons in Uptas are interesting and engaging as the tutors
-                tries his best to simplify chemistry concepts..
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="content">
-              <table>
-                <tr>
-                  <td class="p-3">
-                    <img class="owl_img" src="<?php echo get_template_directory_uri(); ?>/inc/img/owl_img.png" alt="" />
-                  </td>
-                  <td class="p-3">
-                    <span class="owl_cap">Sally (TKGS, VJC)</span>
-                    <span>&#11088;</span><span>&#11088;</span><span>&#11088;</span><span>&#11088;</span><span>&#11088;</span>
-                  </td>
-                </tr>
-              </table>
-              <div class="owl_text">
-                Lessons in Uptas are interesting and engaging as the tutors
-                tries his best to simplify chemistry concepts..
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="content">
-              <table>
-                <tr>
-                  <td class="p-3">
-                    <img class="owl_img" src="<?php echo get_template_directory_uri(); ?>/inc/img/owl_img.png" alt="" />
-                  </td>
-                  <td class="p-3">
-                    <span class="owl_cap">Sally (TKGS, VJC)</span>
-                    <span>&#11088;</span><span>&#11088;</span><span>&#11088;</span><span>&#11088;</span><span>&#11088;</span>
-                  </td>
-                </tr>
-              </table>
-              <div class="owl_text">
-                Lessons in Uptas are interesting and engaging as the tutors
-                tries his best to simplify chemistry concepts..
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="content">
-              <table>
-                <tr>
-                  <td class="p-3">
-                    <img class="owl_img" src="<?php echo get_template_directory_uri(); ?>/inc/img/owl_img.png" alt="" />
-                  </td>
-                  <td class="p-3">
-                    <span class="owl_cap">Sally (TKGS, VJC)</span>
-                    <span>&#11088;</span><span>&#11088;</span><span>&#11088;</span><span>&#11088;</span><span>&#11088;</span>
-                  </td>
-                </tr>
-              </table>
-              <div class="owl_text">
-                Lessons in Uptas are interesting and engaging as the tutors
-                tries his best to simplify chemistry concepts..
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <?php get_template_part('testimonials');?>
   <!-- qualities secttion start -->
   <div class="qualities section" id="qualities">
     <div class="container">
@@ -357,73 +183,39 @@ Template Name: Home
         <div class="col-sm-6">
           <div class="qualities-left mt-3 px-1">
             <h1 class="title pb-3">
-              Why People Choose Our Institute and Not Others?
+            <?php the_field('section_02_title');?>
             </h1>
             <p class="description">
-              Lorem ipsum Lorem ipsum dolor sit amet, consectetuer adipiscing
-              elit, sed diam nonummy nibh euismod tinciLorem ipsum dolor sit
-              amet, consectetuer adipiscing elit, sed diam nonummy nibh
-              euismod tincidunt ut lao
+            <?php the_field('section_02_descriptions');?>
             </p>
           </div>
         </div>
 
         <div class="col-sm-6">
           <div class="qualities-right mt-4">
-            <div class="sub-content pb-4">
-              <div class="row">
-                <div class="col-sm-3">
-                  <div class="image text-center">
-                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/inc/img/reliability icon.svg" alt="" />
+          <?php if( have_rows('qulities') ): ?>
+              <?php while( have_rows('qulities') ): the_row(); 
+                  $image = get_sub_field('image');
+                  ?>
+                  <div class="sub-content pb-4">
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <div class="image text-center">
+                          <img class="img-fluid" src="<?php echo $image['url']; ?>" alt="" />
+                        </div>
+                      </div>
+                      <div class="col-sm-9">
+                        <div class="details">
+                          <h4><?php the_sub_field('title'); ?></h4>
+                          <p>
+                          <?php the_sub_field('caption'); ?>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="col-sm-9">
-                  <div class="details">
-                    <h4>Reliability</h4>
-                    <p>
-                      Lorem ipsum Lorem ipsum dolor sit amet, consectetuer
-                      adipiscing elit, sed diam nonummy nibh euismod tinci
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="sub-content pb-4">
-              <div class="row">
-                <div class="col-sm-3">
-                  <div class="image text-center">
-                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/inc/img/quality.svg" alt="" />
-                  </div>
-                </div>
-                <div class="col-sm-9">
-                  <div class="details">
-                    <h4>Reliability</h4>
-                    <p>
-                      Lorem ipsum Lorem ipsum dolor sit amet, consectetuer
-                      adipiscing elit, sed diam nonummy nibh euismod tinci
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="sub-content">
-              <div class="row">
-                <div class="col-sm-3">
-                  <div class="image text-center">
-                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/inc/img/reliability.svg" alt="" />
-                  </div>
-                </div>
-                <div class="col-sm-9">
-                  <div class="details">
-                    <h4>Reliability</h4>
-                    <p>
-                      Lorem ipsum Lorem ipsum dolor sit amet, consectetuer
-                      adipiscing elit, sed diam nonummy nibh euismod tinci
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <?php endwhile; ?>
+          <?php endif; ?>
           </div>
         </div>
       </div>
@@ -438,22 +230,11 @@ Template Name: Home
         <div class="question-area">
           <div class="row">
             <div class="col-sm-7">
-              <h2>Are There Any Other Questions?</h2>
-              <p>Lorem ipsum Lorem ipsum dolor sit amet, consectetuer</p>
+              <h2><?php the_field('section_03_title'); ?></h2>
+              <p><?php the_field('section_03_description'); ?></p>
             </div>
             <div class="col-sm-5">
-              <form class="mt-3">
-                <div class="row">
-                  <div class="col-7">
-                    <input type="text" class="form-control" />
-                  </div>
-                  <div class="col-5">
-                    <button type="submit" class="btn btn-primary mb-2">
-                      GET CONSULT
-                    </button>
-                  </div>
-                </div>
-              </form>
+            <?php echo do_shortcode('[contact-form-7 id="109" title="GET CONSULT"]');?>
             </div>
           </div>
         </div>
@@ -468,21 +249,21 @@ Template Name: Home
       <div class="row">
         <div class="col-sm-6">
           <div class="tutor-des">
-            <h3>RESULTS REDEFINED</h3>
-            <h5>We Are a Team of Highly Professional Tutor Specialists</h5>
+            <h3><?php the_field('section_04_sub_title'); ?></h3>
+            <h5><?php the_field('section_04_title'); ?></h5>
             <div id="borderbottom"></div>
             <p>
-              In publishing and graphic design, Lorem ipsum is a placeholder
-              text commonly used to demonstrate the visual form of a document
-              or a typeface without relying on meaningful content.
+            <?php the_field('section_04_description'); ?>
             </p>
-            <a class="btn btn-primary mt-2" href=""> LEARN MORE </a>
+            <a class="btn btn-primary mt-2" href="<?php the_field('section_04_button_link'); ?>"> <?php the_field('section_04_button_text'); ?> </a>
           </div>
         </div>
 
         <div class="col-sm-6 justify-content-center">
           <div class="image">
-            <img class="img-fluid blue_shadow" src="<?php echo get_template_directory_uri(); ?>/inc/img/draw_teaching.png" alt="" />
+          <?php if( get_field('section_04_image') ): ?>
+              <img class="img-fluid blue_shadow" src="<?php the_field('section_04_image'); ?>" alt="uptas" />
+          <?php endif; ?>
           </div>
         </div>
       </div>
@@ -497,28 +278,26 @@ Template Name: Home
         <div class="col-sm-5">
           <div class="form_sec-description">
             <div class="form_sec-content">
-              <h2>A Guarantee of Achieving the Desired Result!</h2>
+              <h2><?php the_field('section_05_title'); ?></h2>
               <p class="description text-dark">
-                The specialists of our institute will provide you with expert
-                advice on any issue that interests you.
+              <?php the_field('section_05_description'); ?>
               </p>
             </div>
 
             <div class="form_sec-list">
               <div class="list mt-4">
-                <p>
-                  <span class="bl_num">1.</span>
-                  <span class="bl_txt">PhD Doctorate Scholar Super Tutor Chemistry Lab</span>
-                </p>
-                <p>
-                  <span class="bl_num">2.</span>
-                  <span class="bl_txt">Adaptive Learning Smart Learning System (AI LMS)</span>
-                </p>
-                <p>
-                  <span class="bl_num">3.</span>
-                  <span class="bl_txt">We are ready to answer right now! Sign up for a free
-                    session.</span>
-                </p>
+              <?php if( have_rows('key') ): 
+                $i=1;
+                ?>
+                  <?php while( have_rows('key') ): the_row(); ?>
+                      <p>
+                      <span class="bl_num"><?php echo $i; ?>.</span>
+                        <span class="bl_txt"><?php the_sub_field('points'); ?></span>
+                      </p>
+                  <?php 
+                $i++;
+                endwhile; ?>
+              <?php endif; ?>
               </div>
             </div>
           </div>
@@ -529,31 +308,21 @@ Template Name: Home
             <div class="row">
               <div class="col-sm-5">
                 <div class="img-form_sec">
-                  <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/inc/img/Singapore-Chemistry-Academy- Dr-1.png" alt="" />
+                <?php if( get_field('section_05_image') ): ?>
+                  <img class="img-fluid" src="<?php the_field('section_05_image'); ?>" alt="uptas" />
+                <?php endif; ?> 
                 </div>
               </div>
               <div class="col-sm-7">
                 <div class="form">
-                  <h2>Get a Free Session!</h2>
+                  <h2><?php the_field('section_05_form_title'); ?></h2>
                   <p class="py-3">
-                    We are ready to answer right now! Sign up for a free
-                    session.
+                  <?php the_field('section_05_form_description'); ?>
                   </p>
 
-                  <div class="form-group">
-                    <input type="fname" class="form-control" id="firstName" placeholder="First Name" />
-                  </div>
-                  <div class="form-group">
-                    <input type="lname" class="form-control" id="lastName" placeholder="Last Name" />
-                  </div>
-                  <div class="form-group">
-                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your phone number" />
-                  </div>
-
-                  <button type="submit" class="">BOOK SESSION</button>
+                  <?php echo do_shortcode('[contact-form-7 id="130" title="Get a Free Session!"]');?>
                   <p class="last-des">
-                    I consent to the prossing of pertinal data and agree with
-                    the user agreement and privacy policy.
+                  <?php the_field('section_05_form_agree_text'); ?>
                   </p>
                 </div>
               </div>

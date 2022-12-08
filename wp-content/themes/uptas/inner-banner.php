@@ -12,25 +12,27 @@
         <tr>
           <td class="db_left">
             <div class="left_sd">
-              <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/inc/img/bnr_img.png" alt="">
+              <?php if( get_field('inner_banner_circle_image','option') ): ?>
+                  <img class="img-fluid" src="<?php the_field('inner_banner_circle_image','option'); ?>" alt="uptas" />
+              <?php endif; ?>
             </div>
           </td>
           <td class="db_right">
             <div class="right_sd">
-              <h1 class="bnr_title">Dr. Aw Junxin</h1>
-              <span class="bnr_subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eum</span>
+              <h1 class="bnr_title"> <?php the_field('inner_banner_title','option'); ?></h1>
+              <span class="bnr_subtitle"> <?php the_field('inner_banner_sub_title','option'); ?></span>
               <p class="bnr_p">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam incidunt velit dolorum neque ratione
-                doloremque, fuga similique iste distinctio odit deserunt ullam dignissimos tempora pariatur aliquid
-                repudiandae quam! Voluptate, perferendis!
+              <?php the_field('inner_banner_description','option'); ?>
               </p>
-              <span><a href="" class="btn btn-light">Contact Us</a></span>
-              <span><a href=""><img class="so_icon" src="<?php echo get_template_directory_uri(); ?>/inc/img/facebook.png" alt=""></a></span>
-              <span><a href=""><img class="so_icon" src="<?php echo get_template_directory_uri(); ?>/inc/img/twitter.png" alt=""></a></span>
-              <span><a href=""><img class="so_icon" src="<?php echo get_template_directory_uri(); ?>/inc/img/pinterest.png" alt=""></a></span>
-              <span><a href=""><img class="so_icon" src="<?php echo get_template_directory_uri(); ?>/inc/img/linkedin.png" alt=""></a></span>
-              <span><a href=""><img class="so_icon" src="<?php echo get_template_directory_uri(); ?>/inc/img/whatsapp.png" alt=""></a></span>
-
+              
+              <span><a href="<?php the_field('inner_banner_button_link','option'); ?>" class="btn btn-light"><?php the_field('inner_banner_button_text','option'); ?></a></span>
+              <?php if( have_rows('social_media','option') ): ?>
+                  <?php while( have_rows('social_media','option') ): the_row(); 
+                      $image = get_sub_field('social_icon');
+                      ?>
+                          <span><a href="<?php the_sub_field('social_link'); ?>"><img class="so_icon" src="<?php echo $image['url']; ?>" alt=""></a></span>
+                  <?php endwhile; ?>
+              <?php endif; ?>
             </div>
           </td>
         </tr>
