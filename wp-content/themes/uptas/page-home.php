@@ -340,22 +340,11 @@ Template Name: Home
         <div class="question-area">
           <div class="row">
             <div class="col-sm-7">
-              <h2>Are There Any Other Questions?</h2>
-              <p>Lorem ipsum Lorem ipsum dolor sit amet, consectetuer</p>
+              <h2><?php the_field('section_03_title'); ?></h2>
+              <p><?php the_field('section_03_description'); ?></p>
             </div>
             <div class="col-sm-5">
-              <form class="mt-3">
-                <div class="row">
-                  <div class="col-7">
-                    <input type="text" class="form-control" />
-                  </div>
-                  <div class="col-5">
-                    <button type="submit" class="btn btn-primary mb-2">
-                      GET CONSULT
-                    </button>
-                  </div>
-                </div>
-              </form>
+            <?php echo do_shortcode('[contact-form-7 id="109" title="GET CONSULT"]');?>
             </div>
           </div>
         </div>
@@ -370,21 +359,21 @@ Template Name: Home
       <div class="row">
         <div class="col-sm-6">
           <div class="tutor-des">
-            <h3>RESULTS REDEFINED</h3>
-            <h5>We Are a Team of Highly Professional Tutor Specialists</h5>
+            <h3><?php the_field('section_04_sub_title'); ?></h3>
+            <h5><?php the_field('section_04_title'); ?></h5>
             <div id="borderbottom"></div>
             <p>
-              In publishing and graphic design, Lorem ipsum is a placeholder
-              text commonly used to demonstrate the visual form of a document
-              or a typeface without relying on meaningful content.
+            <?php the_field('section_04_description'); ?>
             </p>
-            <a class="btn btn-primary mt-2" href=""> LEARN MORE </a>
+            <a class="btn btn-primary mt-2" href="<?php the_field('section_04_button_link'); ?>"> <?php the_field('section_04_button_text'); ?> </a>
           </div>
         </div>
 
         <div class="col-sm-6 justify-content-center">
           <div class="image">
-            <img class="img-fluid blue_shadow" src="<?php echo get_template_directory_uri(); ?>/inc/img/draw_teaching.png" alt="" />
+          <?php if( get_field('section_04_image') ): ?>
+              <img class="img-fluid blue_shadow" src="<?php the_field('section_04_image'); ?>" alt="uptas" />
+          <?php endif; ?>
           </div>
         </div>
       </div>
@@ -399,28 +388,26 @@ Template Name: Home
         <div class="col-sm-5">
           <div class="form_sec-description">
             <div class="form_sec-content">
-              <h2>A Guarantee of Achieving the Desired Result!</h2>
+              <h2><?php the_field('section_05_title'); ?></h2>
               <p class="description text-dark">
-                The specialists of our institute will provide you with expert
-                advice on any issue that interests you.
+              <?php the_field('section_05_description'); ?>
               </p>
             </div>
 
             <div class="form_sec-list">
               <div class="list mt-4">
-                <p>
-                  <span class="bl_num">1.</span>
-                  <span class="bl_txt">PhD Doctorate Scholar Super Tutor Chemistry Lab</span>
-                </p>
-                <p>
-                  <span class="bl_num">2.</span>
-                  <span class="bl_txt">Adaptive Learning Smart Learning System (AI LMS)</span>
-                </p>
-                <p>
-                  <span class="bl_num">3.</span>
-                  <span class="bl_txt">We are ready to answer right now! Sign up for a free
-                    session.</span>
-                </p>
+              <?php if( have_rows('key') ): 
+                $i=1;
+                ?>
+                  <?php while( have_rows('key') ): the_row(); ?>
+                      <p>
+                      <span class="bl_num"><?php echo $i; ?>.</span>
+                        <span class="bl_txt"><?php the_sub_field('points'); ?></span>
+                      </p>
+                  <?php 
+                $i++;
+                endwhile; ?>
+              <?php endif; ?>
               </div>
             </div>
           </div>
@@ -431,31 +418,21 @@ Template Name: Home
             <div class="row">
               <div class="col-sm-5">
                 <div class="img-form_sec">
-                  <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/inc/img/Singapore-Chemistry-Academy- Dr-1.png" alt="" />
+                <?php if( get_field('section_05_image') ): ?>
+                  <img class="img-fluid" src="<?php the_field('section_05_image'); ?>" alt="uptas" />
+                <?php endif; ?> 
                 </div>
               </div>
               <div class="col-sm-7">
                 <div class="form">
-                  <h2>Get a Free Session!</h2>
+                  <h2><?php the_field('section_05_form_title'); ?></h2>
                   <p class="py-3">
-                    We are ready to answer right now! Sign up for a free
-                    session.
+                  <?php the_field('section_05_form_description'); ?>
                   </p>
 
-                  <div class="form-group">
-                    <input type="fname" class="form-control" id="firstName" placeholder="First Name" />
-                  </div>
-                  <div class="form-group">
-                    <input type="lname" class="form-control" id="lastName" placeholder="Last Name" />
-                  </div>
-                  <div class="form-group">
-                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your phone number" />
-                  </div>
-
-                  <button type="submit" class="">BOOK SESSION</button>
+                  <?php echo do_shortcode('[contact-form-7 id="130" title="Get a Free Session!"]');?>
                   <p class="last-des">
-                    I consent to the prossing of pertinal data and agree with
-                    the user agreement and privacy policy.
+                  <?php the_field('section_05_form_agree_text'); ?>
                   </p>
                 </div>
               </div>

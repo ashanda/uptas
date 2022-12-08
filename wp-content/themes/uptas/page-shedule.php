@@ -8,11 +8,7 @@ Template Name: Shedule
 <div class="shed_banner">
     <div class="container-fluid">
       <div class="shed_ban_cap">
-        <h1>Uptas Learning Hub</h1>
-        <h2>Thomson/Bishan Branch: 11 Sin Ming Rd, Thomson V Two, B2-09 Unit 4, S575629</h2>
-        <p>(1 Min Walk From Upper Thomson MRT)</p>
-        <h2>Bedok Branch:209 New Upper Changi Road #03-645, S460209</h2>
-        <p>(2min Walk From Bedok MRT)</p>
+        <?php the_field('main_section');?>
       </div>
     </div>
   </div>
@@ -24,7 +20,7 @@ Template Name: Shedule
         <div class="col-md-12 col-lg-6">
           <div class="single-table">
             <table class="table table-bordered caption-top bg-secondary">
-              <caption class="text-center bg-success text-light fw-bold">Secondary 3/ Year 3/ IGGSE Grade 9 Chemistry
+              <caption class="text-center bg-success text-light fw-bold"><?php the_field('class_schedule_table_title_left_top');?>
               </caption>
               <thead>
                 <tr>
@@ -36,6 +32,15 @@ Template Name: Shedule
                 </tr>
               </thead>
               <tbody>
+              <?php if( have_rows('class_schedule_table_left_top') ): ?>
+
+                    <?php while( have_rows('class_schedule_table_left_top') ): the_row(); ?>
+                        <li>
+                            <?php echo wp_get_attachment_image( $image, 'full' ); ?>
+                            <p><?php the_sub_field('caption'); ?></p>
+                        </li>
+                    <?php endwhile; ?>
+                <?php endif; ?>
                 <tr>
                   <td rowspan="3">Pure/Combined</td>
                   <td>Bedok</td>
@@ -43,6 +48,7 @@ Template Name: Shedule
                   <td>5.00PM-7.00PM</td>
                   <td>Onsite/Online</td>
                 </tr>
+
                 <tr>
                   <td>Bedok</td>
                   <td>Monday</td>
@@ -67,7 +73,7 @@ Template Name: Shedule
           </div>
           <div class="single-table">
             <table class="table table-bordered caption-top bg-secondary">
-              <caption class="text-center bg-success text-light fw-bold">Secondary 3/ Year 3/ IGGSE Grade 9 Chemistry
+              <caption class="text-center bg-success text-light fw-bold"><?php the_field('class_schedule_table_title_left_middle');?>
               </caption>
               <thead>
                 <tr>
@@ -129,7 +135,7 @@ Template Name: Shedule
           </div>
           <div class="single-table">
             <table class="table table-bordered caption-top bg-secondary">
-              <caption class="text-center bg-danger text-light fw-bold">Secondary 3/ Year 3/ IGGSE Grade 9 Chemistry
+              <caption class="text-center bg-danger text-light fw-bold"><?php the_field('class_schedule_table_title_left_bottom');?>
               </caption>
               <thead>
                 <tr>
@@ -212,7 +218,7 @@ Template Name: Shedule
         <div class="col-md-12 col-lg-6">
           <div class="single-table">
             <table class="table table-bordered caption-top bg-secondary">
-              <caption class="text-center bg-warning text-light fw-bold">Secondary 3/ Year 3/ IGGSE Grade 9 Chemistry
+              <caption class="text-center bg-warning text-light fw-bold"><?php the_field('class_schedule_table_title_right_top');?>
               </caption>
               <thead>
                 <tr>
@@ -272,7 +278,7 @@ Template Name: Shedule
           </div>
           <div class="single-table">
             <table class="table table-bordered caption-top bg-secondary">
-              <caption class="text-center bg-warning text-light fw-bold">Secondary 3/ Year 3/ IGGSE Grade 9 Chemistry
+              <caption class="text-center bg-warning text-light fw-bold"><?php the_field('class_schedule_table_title_right_bottom');?>
               </caption>
               <thead>
                 <tr>
