@@ -5,7 +5,7 @@ Template Name: Blog Page
 get_header();  ?>
 <!-- Banner Start -->
 
-<div class="sample-banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/img/banner.jpg');">
+<div class="sample-banner section" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/img/banner.jpg');">
   <div class="container text-center">
     <div class="banner-maintext">
       <h2 class="main-heading">Uptas Blog</h2>
@@ -21,7 +21,7 @@ get_header();  ?>
 <!-- Banner Wrapper End -->
 
 <!--Body Content Wrapper Start-->
-<section class="section-card">
+<section class="section-card section">
   <div class="container p-0">
     <div class="cards">
       <div class="row mt-4 pl-4">
