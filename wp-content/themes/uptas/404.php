@@ -17,7 +17,7 @@ get_header();
 <h1>Oops!</h1>
 <h2>404 - The Page can't be found</h2>
 </div>
-<a href="#" class= 'btn btn-primary mt-2'>Go TO Homepage</a>
+<a href="<?php echo get_home_url(); ?>" class= 'btn btn-primary mt-2'>Go TO Homepage</a>
 </div>
 </div>
 
