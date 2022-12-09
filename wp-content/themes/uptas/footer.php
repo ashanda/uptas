@@ -11,7 +11,7 @@
 
 ?>
 <!-- Footer start -->
-<div class="container">
+<div class="container footer" id="footer">
     <div class="row last-row my-3">
       <div class="col-sm-6">
         <div class="footer_logo">
@@ -39,6 +39,27 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/inc/script/script.js"></script>
+        <script>
+        // function to set the height on fly
+      function autoHeight() {
+        $('#content').css('min-height', 0);
+        $('#content').css('min-height', (
+          $(document).height() 
+          - $('#header').height() 
+          - $('#footer').height()
+        ));
+      }
+
+      // onDocumentReady function bind
+      $(document).ready(function() {
+        autoHeight();
+      });
+
+      // onResize bind of the function
+      $(window).resize(function() {
+        autoHeight();
+      });
+      </script>
   <?php wp_footer(); ?>
 </body>
 
