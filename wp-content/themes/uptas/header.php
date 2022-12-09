@@ -46,7 +46,7 @@
 <?php wp_body_open(); ?>
   <!-- Main wrapper start -->
   <!-- header start -->
-  <header class="main">
+  <header class="main" id="header">
     <div class="container-fluid">
       <!-- start navigation bar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">

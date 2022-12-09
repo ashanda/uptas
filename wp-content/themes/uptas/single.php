@@ -1,40 +1,43 @@
 <?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package uptas
- */
+/*
+Template Name: Single Blog Page
+*/
+get_header();  ?>
+<!-- Banner Start -->
 
-get_header();
-?>
+<div class="sample-banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/img/banner.jpg');">
+  <div class="container text-center">
+    <div class="banner-maintext">
+      <h2 class="main-heading">Uptas Blog</h2>
+    </div>
+    <div class="d-flex flex-md-row flex-wrap justify-content-center">
+	<div class="page-links pa-links" style="color: white;font-weight: 500;font-size: 15px;letter-spacing: 3px;">
+       <?php get_breadcrumb();?>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Banner Wrapper End -->
 
-	<main id="primary" class="site-main">
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'uptas' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'uptas' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<!--Body Content Wrapper Start-->
+<div class="sb_sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="sb_top text-center">
+          <span>Chemica Reactions</span>
+          <h3 class="mat-4">Chemica Reactions For Fun</h3>
+          <div class="other-links d-flex flex-md-row flex-wrap justify-content-center">
+                <p class="post-by pr-2">post by</p>
+                <p class="circle"><a href=""><i class="fa fa-solid fa-circle"></i></a></p>
+                <p class="chathuranga">d.chathuranga</p>
+                <p class="comment"><a href=""><i class="fa fa-light fa-message"></i></a></p>
+                <p class="share"><a href=""><i class="fa fa-solid fa-share-nodes"></i></a></p>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<?php get_footer(); ?>
