@@ -1285,7 +1285,7 @@ p.card-text {
 .wc_bot_sec .card {
   border: none;
 }
-.wc_bot_sec .card-title{
+.wc_bot_sec .card-title {
   width: 100%;
   margin-bottom: 12px;
 }
@@ -1305,50 +1305,112 @@ p.card-text {
 
 /*----------------------------------Contact Us ----------------------------------------------------------------------------*/
 
-.google_map iframe{
+.google_map iframe {
   width: 100%;
   height: 30vw;
 }
 
-.contact_sec{
+.contact_sec {
   margin: 70px 0;
 }
-.contact_sec .sub_head{
+.contact_sec .sub_head {
   text-transform: uppercase;
   font-weight: bold;
 }
-.contact_sec .head{
+.contact_sec .head {
   font-weight: bold;
-  border-bottom: 2px solid rgba(0,0,0,.125);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.125);
 }
-.contact_sec .accordion-item{
+.contact_sec .accordion-item {
   border: none;
-  border-bottom: 1px solid rgba(0,0,0,.125);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
-.contact_sec .accordion-button{
+.contact_sec .accordion-button {
   font-weight: bold;
   color: rgb(82, 82, 82);
 }
-.contform_sec label{
+.contform_sec label {
   font-weight: bold;
 }
-.contform_btn .btn{
+.contform_btn .btn {
   background-color: #f1f5f9;
   border-radius: 0;
   font-weight: bold;
 }
 
 /*----------------------------------Single Blog Page ----------------------------------------------------------------------------*/
-.sb_sec{
+.sb_sec {
   margin: 50px 0;
 }
-.sb_top span{
+.sb_top span {
   background-color: #7593e7;
   padding: 5px;
 }
-.sb_top .other-links{
+.sb_top .other-links {
   padding-top: 0;
 }
+.sb_img {
+  position: relative;
+}
+.sb_img img {
+  width: 100%;
+}
+.sb_img_date {
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+.sb-subhead h5 {
+  border-bottom: 1px solid rgb(0, 0, 0);
+  width: fit-content;
+  padding-bottom: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.post_auth {
+  background-color: rgb(240, 247, 253);
+}
+.post_auth .round {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(221, 221, 221);
+  border-radius: 50%;
+  margin-top: -50px;
+}
+.post_auth_bor {
+  border-bottom: 4px solid rgb(221, 221, 221);
+}
+.post_auth a {
+  text-decoration: none;
+  color: #000;
+}
 
-
-
+.auth_links .tags .btn {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 2px 5px;
+  border-radius: 0;
+}
+.smeida_icons .so_icon{
+  width: 25px;
+}
+.navg table{
+  width: 100%;
+}
+.navg .icon{
+  width: 20%;
+}
+.navg .icon a{
+  color: #000;
+}
+.catg,
+.rect{
+  border-bottom: 2px solid rgba(0, 0, 0, 0.125);
+}
+.rect .imge{
+  width: 30%;
+}
+.rect .capt{
+margin-left: 10px;
+}
