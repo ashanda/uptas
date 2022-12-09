@@ -139,11 +139,11 @@ get_header();  ?>
     </table>
   </div>
 </div>
-<div class="wc_bot_sec section mb-2 mb-sm-5">
+<div class="wc_bot_sec section mb-2 mb-sm-4">
   <div class="container">
     <div class="row">
       <div class="col-sm-6">
-        <div class="video_card">
+        <div class="video_card mb-2">
           <div class="card">
             <iframe src="https://www.youtube.com/embed/pWahNIMRxR0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="card-body">
@@ -154,7 +154,7 @@ get_header();  ?>
         </div>
       </div>
       <div class="col-sm-6">
-        <div class="video_card">
+        <div class="video_card mb-2">
           <div class="card">
             <iframe src="https://www.youtube.com/embed/pWahNIMRxR0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="card-body">
