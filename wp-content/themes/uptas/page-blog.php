@@ -5,7 +5,7 @@ Template Name: Blog Page
 get_header();  ?>
 <!-- Banner Start -->
 
-<div class="sample-banner section" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/img/banner.jpg');">
+<div class="sample-banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/img/banner.jpg');">
   <div class="container text-center">
     <div class="banner-maintext">
       <h2 class="main-heading">Uptas Blog</h2>

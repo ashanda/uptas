@@ -1338,8 +1338,17 @@ p.card-text {
   font-weight: bold;
 }
 
-
-
+/*----------------------------------Single Blog Page ----------------------------------------------------------------------------*/
+.sb_sec{
+  margin: 50px 0;
+}
+.sb_top span{
+  background-color: #7593e7;
+  padding: 5px;
+}
+.sb_top .other-links{
+  padding-top: 0;
+}
 
 
 
