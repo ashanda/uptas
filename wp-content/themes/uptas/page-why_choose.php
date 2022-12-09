@@ -12,35 +12,23 @@ get_header();  ?>
         <div class="col-sm-6 col-md-3">
           <div class="sing_sec">
             <span class="blue">
-              Some Words About Us
+              <?php the_field('sub_title');?>
             </span>
-            <h1 class="mt-3">WHY YOU SHOULD CHOOSE US</h1>
+            <h1 class="mt-3"><?php the_field('main_title');?></h1>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="sing_sec">
-            <span class="blue">
-              Ai Base learning
-            </span>
-            <p class="mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam commodi autem obcaecati, possimus in dolore consectetur</p>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="sing_sec">
-            <span class="blue">
-              Some Words About Us
-            </span>
-            <p class="mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam commodi autem obcaecati, possimus in dolore consectetur</p>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="sing_sec">
-            <span class="blue">
-              Some Words About Us
-            </span>
-            <p class="mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam commodi autem obcaecati, possimus in dolore consectetur</p>
-          </div>
-        </div>
+        <?php if( have_rows('top_block') ): ?>
+            <?php while( have_rows('top_block') ): the_row();?>
+            <div class="col-sm-6 col-md-3">
+                <div class="sing_sec">
+                  <span class="blue">
+                  <?php the_sub_field('title'); ?>
+                  </span>
+                  <p class="mt-3"><?php the_sub_field('caption'); ?></p>
+                </div>
+              </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
       </div>
     </div>
   </div>
@@ -51,19 +39,18 @@ get_header();  ?>
     <div class="row">
       <div class="col-sm-6">
         <div class="wc_sec2_left_img">
-          <img src="<?php echo get_template_directory_uri(); ?>/inc/img/teach.jpg" alt="" class="img-fluid">
+          <img src="<?php the_field('section_01_image'); ?>" alt="" class="img-fluid">
         </div>
       </div>
       <div class="col-sm-6">
         <div class="wc_sec2_right_capt">
           <span class="blue fw-bold">
-            Online and onsite classes
+          <?php the_field('section_01_sub_title');?>
           </span>
           <h3 class="my-3 fw-bold">
-            About Our Onsite Classes
+          <?php the_field('section_01_title');?>
           </h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis in accusantium quaerat! Deleniti debitis nulla, vitae dignissimos minus numquam esse velit asperiores modi, doloribus veritatis! Incidunt nesciunt molestiae ut eum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse molestiae voluptates facilis rem nemo, quo quasi tempora earum ab eligendi cum possimus ipsum nostrum, quia placeat at numquam eius in?</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque suscipit natus et repudiandae animi voluptate cumque laborum? Et eveniet quasi rerum laudantium, sint animi. Ducimus deserunt culpa quod veritatis incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed at enim quaerat labore hic officiis quis molestias. Maxime praesentium minima totam aut magni voluptatum suscipit, accusantium necessitatibus cupiditate, illum soluta.</p>
+          <?php the_field('section_01_description');?>
         </div>
       </div>
     </div>
@@ -71,18 +58,17 @@ get_header();  ?>
       <div class="col-sm-6">
         <div class="wc_sec2_right_capt">
           <span class="blue fw-bold">
-            Artificial Interligence
+          <?php the_field('section_02_sub_title');?>
           </span>
           <h3 class="my-3 fw-bold">
-            AI Base Learning
+          <?php the_field('section_02_title');?>
           </h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis in accusantium quaerat! Deleniti debitis nulla, vitae dignissimos minus numquam esse velit asperiores modi, doloribus veritatis! Incidunt nesciunt molestiae ut eum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse molestiae voluptates facilis rem nemo, quo quasi tempora earum ab eligendi cum possimus ipsum nostrum, quia placeat at numquam eius in?</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque suscipit natus et repudiandae animi voluptate cumque laborum? Et eveniet quasi rerum laudantium, sint animi. Ducimus deserunt culpa quod veritatis incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed at enim quaerat labore hic officiis quis molestias. Maxime praesentium minima totam aut magni voluptatum suscipit, accusantium necessitatibus cupiditate, illum soluta.</p>
+          <?php the_field('section_02_description');?>
         </div>
       </div>
       <div class="col-sm-6">
         <div class="wc_sec2_left_img">
-          <img src="<?php echo get_template_directory_uri(); ?>/inc/img/ai.jpg" alt="" class="img-fluid">
+          <img src="<?php the_field('section_02_image'); ?>" alt="" class="img-fluid">
         </div>
       </div>
 
@@ -90,47 +76,47 @@ get_header();  ?>
   </div>
 </div>
 
-<div class="wc_mid_banner section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('<?php echo get_template_directory_uri(); ?>/inc/img/banner.jpg')">
+<div class="wc_mid_banner section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('<?php the_field('section_03_background_image'); ?>')">
   <div class="container">
     <table class="out_table">
       <tr>
         <td class="out_table_td text-center text-sm-start">
-          <span class="blue">Ai BAse LEarning</span>
+          <span class="blue"><?php the_field('section_03_sub_title'); ?></span>
           <h3 class="my-3">
-            Ai BAse LEarning
+          <?php the_field('section_03_title'); ?>
           </h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, </p>
+          <p><?php the_field('section_03_description'); ?></p>
         </td>
         <td class="out_table_td">
           <table class="in_table mt-5 mt-md-0">
             <tr class="border-bottom">
               <td class="border-right">
-                <h1>2012</h1>
-                <p>Founding Year</p>
+                <h1><?php the_field('statics_left_top_title_01'); ?></h1>
+                <p><?php the_field('statics_left_top_title_02'); ?></p>
               </td>
               <td>
-                <h1>2012</h1>
-                <p>Founding Year</p>
+                <h1><?php the_field('statics_left_middle_title_01'); ?></h1>
+                <p><?php the_field('statics_left_middle_title_02'); ?></p>
               </td>
             </tr>
             <tr class="border-bottom">
               <td class="border-right">
-                <h1 class="mt-2">99%</h1>
-                <p>Pass Rate</p>
+                <h1 class="mt-2"><?php the_field('statics_left_bottom_title_01'); ?></h1>
+                <p><?php the_field('statics_left_bottom_title_02'); ?></p>
               </td>
               <td>
-                <h1 class="mt-2">2012</h1>
-                <p>Founding Year</p>
+                <h1 class="mt-2"><?php the_field('statics_right_top_title_01'); ?></h1>
+                <p><?php the_field('statics_right_top_title_02'); ?></p>
               </td>
             </tr>
             <tr>
               <td class="border-right">
-                <h1 class="mt-2">2+</h1>
-                <p>facilities</p>
+                <h1 class="mt-2"><?php the_field('statics_right_middle_title_01'); ?></h1>
+                <p><?php the_field('statics_right_middle_title_02'); ?></p>
               </td>
               <td>
-                <h1 class="mt-2">750+</h1>
-                <p>Students</p>
+                <h1 class="mt-2"><?php the_field('statics_right_bottom_title_01'); ?></h1>
+                <p><?php the_field('statics_right_bottom_title_02'); ?></p>
               </td>
             </tr>
           </table>
@@ -145,10 +131,10 @@ get_header();  ?>
       <div class="col-sm-6">
         <div class="video_card mb-2">
           <div class="card">
-            <iframe src="https://www.youtube.com/embed/pWahNIMRxR0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           <?php the_field('section_04_left_video_frame'); ?>
             <div class="card-body">
-              <h5 class="card-title">Company Histry and Facts</h5>
-              <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio accusantium deserunt porro cupiditate reprehenderit repellendus velit eaque, quasi possimus hic dicta nisi quam culpa inventore magnam magni veritatis. Asperiores, neque.</p>
+              <h5 class="card-title"><?php the_field('section_04_left_title'); ?></h5>
+              <p class="card-text"><?php the_field('section_04_left_description'); ?></p>
             </div>
           </div>
         </div>
@@ -156,10 +142,10 @@ get_header();  ?>
       <div class="col-sm-6">
         <div class="video_card mb-2">
           <div class="card">
-            <iframe src="https://www.youtube.com/embed/pWahNIMRxR0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <?php the_field('section_04_right_video_frame'); ?>
             <div class="card-body">
-              <h5 class="card-title">Student Stories</h5>
-              <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio accusantium deserunt porro cupiditate reprehenderit repellendus velit eaque, quasi possimus hic dicta nisi quam culpa inventore magnam magni veritatis. Asperiores, neque.</p>
+              <h5 class="card-title"><?php the_field('section_04_right_title'); ?></h5>
+              <p class="card-text"><?php the_field('section_04_right_description'); ?></p>
             </div>
           </div>
         </div>

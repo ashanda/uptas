@@ -11,9 +11,8 @@ get_header();  ?>
       <h2 class="main-heading">Uptas Blog</h2>
     </div>
     <div class="d-flex flex-md-row flex-wrap justify-content-center">
-      <div class="page-links">
-        <a href="Home" class="pa-links">Home/</a>
-        <a href="Home" class="pa-links">Chemical Reactions</a>
+      <div class="page-links pa-links" style="color: white;font-weight: 500;font-size: 15px;letter-spacing: 3px;">
+       <?php get_breadcrumb();?>
       </div>
     </div>
   </div>
@@ -25,194 +24,57 @@ get_header();  ?>
   <div class="container p-0">
     <div class="cards">
       <div class="row mt-4 pl-4">
-        <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card new-card">
-            <div class="image-area text-center" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/img/blog_teach.jpg');">
-              <div class="date-time">
-                <p class="date-number">22</p>
-                <p class="month-name">JUN</p>
-              </div>
-              <div class="exper">
-                <p class="experiment text-center">FUN EXPERIMENTS</p>
-              </div>
+      <?php
+          $args = array(
+              'post_type' => 'post'
+          );
 
-            </div>
-            <div class="card-body text-center">
-              <h5 class="card-title">Loream ipsum is simply dummy</h5>
+          $post_query = new WP_Query($args);
 
-              <div class="other-links d-flex flex-md-row flex-wrap justify-content-center">
-                <p class="post-by pr-2">post by</p>
-                <p class="circle"><a href=""><i class="fa fa-solid fa-circle"></i></a></p>
-                <p class="chathuranga">d.chathuranga</p>
-                <p class="comment"><a href=""><i class="fa fa-light fa-message"></i></a></p>
-                <p class="share"><a href=""><i class="fa fa-solid fa-share-nodes"></i></a></p>
-              </div>
-              <div class="card-description">
-                <p class="card-text">but also the leap into electronic typesetting, remaining
-                  essentially unchanged.</p>
-                <a href="#" class="des">continue reading</a>
-              </div>
-            </div>
-          </div>
-        </div>
+          if($post_query->have_posts() ) {
+              while($post_query->have_posts() ) {
+                  $post_query->the_post();
+                  $featured_img_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+                  $cats = get_the_category($post->ID);
+                  ?>
+                  <div class="col-lg-4 col-md-4 col-sm-12">
+                      <div class="card new-card">
+                        <div class="image-area text-center" style="background-image: url('<?php echo $featured_img_url; ?>');">
+                          <div class="date-time">
+                            <p class="date-number"><?php the_date('d'); ?></p>
+                            <p class="month-name"><?php the_time( 'M' ); ?></p>
+                          </div>
+                          <div class="exper">
+                            <p class="experiment text-center"><?php echo $cats[0]->name;?></p>
+                          </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card new-card">
-            <div class="image-area text-center" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/img/blog_teach.jpg');">
-              <div class="date-time">
-                <p class="date-number">22</p>
-                <p class="month-name">JUN</p>
-              </div>
-              <div class="exper">
-                <p class="experiment text-center">FUN EXPERIMENTS</p>
-              </div>
+                        </div>
+                        <div class="card-body text-center">
+                          <h5 class="card-title"><?php the_title();?></h5>
 
-            </div>
-            <div class="card-body text-center">
-              <h5 class="card-title">Loream ipsum is simply dummy</h5>
+                          <div class="other-links d-flex flex-md-row flex-wrap justify-content-center">
+                            <p class="post-by pr-2">post by</p>
+                            <p class="circle"><i class="fa fa-solid fa-circle"></i></p>
+                            <p class="chathuranga"><?php the_author(); ?></p>
+                            <p class="comment"><a href=""><i class="fa fa-light fa-message"></i></a></p>
+                            <p class="share"><a href=""><i class="fa fa-solid fa-share-nodes"></i></a></p>
+                          </div>
+                          <div class="card-description">
+                            <p class="card-text"><?php the_excerpt(); ?></p>
+                            <a href="<?php echo get_permalink( $post->ID ); ?>" class="des">continue reading</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <?php
+                  }
+              }
+      ?>
+        
 
-              <div class="other-links d-flex flex-md-row flex-wrap justify-content-center">
-                <p class="post-by pr-2">post by</p>
-                <p class="circle"><a href=""><i class="fa fa-solid fa-circle"></i></a></p>
-                <p class="chathuranga">d.chathuranga</p>
-                <p class="comment"><a href=""><i class="fa fa-light fa-message"></i></a></p>
-                <p class="share"><a href=""><i class="fa fa-solid fa-share-nodes"></i></a></p>
-              </div>
-              <div class="card-description">
-                <p class="card-text">but also the leap into electronic typesetting, remaining
-                  essentially unchanged.</p>
-                <a href="#" class="des">continue reading</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card new-card">
-            <div class="image-area text-center" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/img/blog_teach.jpg');">
-              <div class="date-time">
-                <p class="date-number">22</p>
-                <p class="month-name">JUN</p>
-              </div>
-              <div class="exper">
-                <p class="experiment text-center">FUN EXPERIMENTS</p>
-              </div>
-
-            </div>
-            <div class="card-body text-center">
-              <h5 class="card-title">Loream ipsum is simply dummy</h5>
-
-              <div class="other-links d-flex flex-md-row flex-wrap justify-content-center">
-                <p class="post-by pr-2">post by</p>
-                <p class="circle"><a href=""><i class="fa fa-solid fa-circle"></i></a></p>
-                <p class="chathuranga">d.chathuranga</p>
-                <p class="comment"><a href=""><i class="fa fa-light fa-message"></i></a></p>
-                <p class="share"><a href=""><i class="fa fa-solid fa-share-nodes"></i></a></p>
-              </div>
-              <div class="card-description">
-                <p class="card-text">but also the leap into electronic typesetting, remaining
-                  essentially unchanged.</p>
-                <a href="#" class="des">continue reading</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
 
-      <div class="row mt-4 pl-4 mb-4">
-        <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card">
-            <div class="image-area text-center" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/img/blog_teach.jpg');">
-              <div class="date-time">
-                <p class="date-number">22</p>
-                <p class="month-name">JUN</p>
-              </div>
-              <div class="exper">
-                <p class="experiment text-center">FUN EXPERIMENTS</p>
-              </div>
-
-            </div>
-            <div class="card-body text-center">
-              <h5 class="card-title">Loream ipsum is simply dummy</h5>
-
-              <div class="other-links d-flex flex-md-row flex-wrap justify-content-center">
-                <p class="post-by pr-2">post by</p>
-                <p class="circle"><a href=""><i class="fa fa-solid fa-circle"></i></a></p>
-                <p class="chathuranga">d.chathuranga</p>
-                <p class="comment"><a href=""><i class="fa fa-light fa-message"></i></a></p>
-                <p class="share"><a href=""><i class="fa fa-solid fa-share-nodes"></i></a></p>
-              </div>
-              <div class="card-description">
-                <p class="card-text">but also the leap into electronic typesetting, remaining
-                  essentially unchanged.</p>
-                <a href="#" class="des">continue reading</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card">
-            <div class="image-area text-center" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/img/blog_teach.jpg');">
-              <div class="date-time">
-                <p class="date-number">22</p>
-                <p class="month-name">JUN</p>
-              </div>
-              <div class="exper">
-                <p class="experiment text-center">FUN EXPERIMENTS</p>
-              </div>
-
-            </div>
-            <div class="card-body text-center">
-              <h5 class="card-title">Loream ipsum is simply dummy</h5>
-
-              <div class="other-links d-flex flex-md-row flex-wrap justify-content-center">
-                <p class="post-by pr-2">post by</p>
-                <p class="circle"><a href=""><i class="fa fa-solid fa-circle"></i></a></p>
-                <p class="chathuranga">d.chathuranga</p>
-                <p class="comment"><a href=""><i class="fa fa-light fa-message"></i></a></p>
-                <p class="share"><a href=""><i class="fa fa-solid fa-share-nodes"></i></a></p>
-              </div>
-              <div class="card-description">
-                <p class="card-text">but also the leap into electronic typesetting, remaining
-                  essentially unchanged.</p>
-                <a href="#" class="des">continue reading</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card">
-            <div class="image-area text-center" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/img/blog_teach.jpg');">
-              <div class="date-time">
-                <p class="date-number">22</p>
-                <p class="month-name">JUN</p>
-              </div>
-              <div class="exper">
-                <p class="experiment text-center">FUN EXPERIMENTS</p>
-              </div>
-
-            </div>
-            <div class="card-body text-center">
-              <h5 class="card-title">Loream ipsum is simply dummy</h5>
-
-              <div class="other-links d-flex flex-md-row flex-wrap justify-content-center">
-                <p class="post-by pr-2">post by</p>
-                <p class="circle"><a href=""><i class="fa fa-solid fa-circle"></i></a></p>
-                <p class="chathuranga">d.chathuranga</p>
-                <p class="comment"><a href=""><i class="fa fa-light fa-message"></i></a></p>
-                <p class="share"><a href=""><i class="fa fa-solid fa-share-nodes"></i></a></p>
-              </div>
-              <div class="card-description">
-                <p class="card-text">but also the leap into electronic typesetting, remaining
-                  essentially unchanged.</p>
-                <a href="#" class="des">continue reading</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>

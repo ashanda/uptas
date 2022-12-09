@@ -207,3 +207,35 @@ add_filter( 'show_admin_bar', '__return_false' );
 	  acf_add_options_sub_page( 'Common CMS' );
 		
   }
+
+
+function wpdocs_custom_excerpt_length( $length ) {
+	return 15;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+function wpdocs_excerpt_more( $more ) {
+	return ' ...';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+/**
+ * Generate breadcrumbs
+ */
+function get_breadcrumb(){
+	echo'<a href="'.home_url().'"rel="nofollow" class="pa-links">Home</a>';
+	if(is_category()||is_single()){
+	echo" / ";
+	if(is_single()){
+	the_title();
+	}
+	}elseif(is_page()){
+	echo" / ";
+	echo the_title();
+	}elseif(is_search()){
+	echo" / ";
+	echo'"<em>';
+	echo the_search_query();
+	echo'</em>"';
+	}
+	}
