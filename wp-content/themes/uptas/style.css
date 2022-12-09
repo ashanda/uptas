@@ -1414,3 +1414,26 @@ p.card-text {
 .rect .capt{
 margin-left: 10px;
 }
+.tags .btn {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 2px 5px;
+  border-radius: 0;
+  margin-bottom: 5px;
+}
+.catagory {
+padding-top: 90px;
+}
+.get_qoute {
+  background: #163dac;
+  color: #ffff;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 136px;
+  height: 40px;
+  border-radius: 0;
+}
+.get_qoute:hover {
+  color: #fff;
+  background: #163dac;
+  border-color: #198754;
+}

@@ -90,7 +90,7 @@
               </div>
 
               <div class="nav-button">
-              <a class="btn btn-outline-success" href="<?php the_field('header_button_link','option');?>" role="button">
+              <a class="btn btn-outline-success get_qoute" href="<?php the_field('header_button_link','option');?>" role="button">
                 <?php the_field('header_button_text','option');?>
               </a>
               </div>

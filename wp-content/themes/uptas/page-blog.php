@@ -55,7 +55,12 @@ get_header();  ?>
                           <div class="other-links d-flex flex-md-row flex-wrap justify-content-center">
                             <p class="post-by pr-2">post by</p>
                             <p class="circle"><i class="fa fa-solid fa-circle"></i></p>
-                            <p class="chathuranga"><?php the_author(); ?></p>
+                            <?php if( get_field('author_name') ){ ?>
+                              <p class="chathuranga"><?php the_field('author_name'); ?></p>
+                            <?php }else{ ?>
+                              <p class="chathuranga"><?php the_author(); ?></p>
+                            <?php } ?>
+                            
                             <p class="comment"><a href=""><i class="fa fa-light fa-message"></i></a></p>
                             <p class="share"><a href=""><i class="fa fa-solid fa-share-nodes"></i></a></p>
                           </div>
