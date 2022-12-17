@@ -29,7 +29,7 @@ Template Name: Home
                 $active = '';
               }
               ?>
-              <div class="carousel-item <?php echo $active;?>">
+              <div class="carousel-item <?php echo $active;?>" style="background-image: url('<?php echo $image['url'];?>')">
                 <img src="<?php echo $image['url'];?>" class="d-block" alt="..." />
                 <div class="carousel-caption d-block">
                   <h6><?php the_sub_field('sub_title'); ?></h6>
