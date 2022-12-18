@@ -718,7 +718,10 @@ button.btn.btn-outline-success {
     margin-top: 40px;
   }
   .top_slider {
-    height: 99vw;
+    height: 180vw;
+  }
+  .carousel-item{
+    height: 180vw;
   }
   .carousel-caption {
     top: unset;
