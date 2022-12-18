@@ -268,10 +268,11 @@ button.btn.btn-outline-success {
   background-size: cover;
   height: 962px;
 }
-
-.carousel-item img {
+.carousel-item {
   height: 836px;
   width: auto;
+}
+.carousel-item img {
   float: right;
 }
 
@@ -717,7 +718,7 @@ button.btn.btn-outline-success {
     margin-top: 40px;
   }
   .top_slider {
-    height: 182vw;
+    height: 99vw;
   }
   .carousel-caption {
     top: unset;
@@ -1392,27 +1393,27 @@ p.card-text {
   padding: 2px 5px;
   border-radius: 0;
 }
-.smeida_icons .so_icon{
+.smeida_icons .so_icon {
   width: 25px;
 }
-.navg table{
+.navg table {
   width: 100%;
 }
-.navg .icon{
+.navg .icon {
   width: 20%;
 }
-.navg .icon a{
+.navg .icon a {
   color: #000;
 }
 .catg,
-.rect{
+.rect {
   border-bottom: 2px solid rgba(0, 0, 0, 0.125);
 }
-.rect .imge{
+.rect .imge {
   width: 30%;
 }
-.rect .capt{
-margin-left: 10px;
+.rect .capt {
+  margin-left: 10px;
 }
 .tags .btn {
   border: 1px solid rgb(0, 0, 0);
@@ -1421,7 +1422,7 @@ margin-left: 10px;
   margin-bottom: 5px;
 }
 .catagory {
-padding-top: 90px;
+  padding-top: 90px;
 }
 .get_qoute {
   background: #163dac;
