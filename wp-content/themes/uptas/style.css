@@ -270,29 +270,28 @@ button.btn.btn-outline-success {
 }
 .carousel-item {
   height: 836px;
-  width: auto;
+  width: 100%;
 }
 .carousel-item img {
   float: right;
+  opacity: 0;
 }
 
 .carousel-caption {
-  position: absolute;
+  /* position: absolute;
   top: 12vw;
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
   left: 0;
-  width: 100%;
- 
-}
-.carousel-caption .content {
+  width: 100%; */
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+ 
 }
 
 .carousel-item h6 {
