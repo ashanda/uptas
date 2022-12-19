@@ -97,7 +97,9 @@ get_header();  ?>
         <?php while (have_rows('section_01_blocks')) : the_row(); ?>
           <div class="col-md-3 col-sm-3">
             <div class="learning-content">
-              <h2>0<?php echo $i; ?>. <span><?php the_sub_field('title'); ?></span></h2>
+              <h2>
+                <!-- 0<?php echo $i; ?>.  -->
+                <span><?php the_sub_field('title'); ?></span></h2>
             </div>
             <p class="sub-content">
               <?php the_sub_field('caption'); ?>
@@ -113,7 +115,7 @@ get_header();  ?>
 <!-- Learning-stream section end -->
 
 <!-- work section start -->
-<div class="work section" id="work">
+<div class="work section d-none" id="work">
   <div class="container">
     <div class="row mt-4">
       <div class="col-sm-6">
@@ -239,7 +241,7 @@ get_header();  ?>
 <!-- other question form area end -->
 
 <!-- tutor specialist area start -->
-<div class="tutor section" id="tutor">
+<div class="tutor section d-none" id="tutor">
   <div class="container">
     <div class="row">
       <div class="col-sm-6">
