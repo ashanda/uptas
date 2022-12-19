@@ -80,11 +80,11 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/inc/img/phone icon.svg" alt="Phone" />
                 <div class="contact-no">
                   <p><?php the_field('conatct_number_01', 'option'); ?></p>
-                  <p><?php the_field('conatct_number_02', 'option'); ?></p>
+                  <p><?php the_field('conatct_email', 'option'); ?></p>
                 </div>
               </div>
 
-              <div class="nav-button">
+              <div class="nav-button d-none">
                 <a class="btn btn-outline-success get_qoute" href="<?php the_field('header_button_link', 'option'); ?>" role="button">
                   <?php the_field('header_button_text', 'option'); ?>
                 </a>
