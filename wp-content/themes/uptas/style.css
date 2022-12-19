@@ -277,16 +277,14 @@ button.btn.btn-outline-success {
 }
 
 .carousel-caption {
-  /* text-align: left;
   position: absolute;
   top: 12vw;
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: #fff;
   left: 0;
-  width: 60%;
-  background: #ffffff8c; */
+  width: 100%;
+ 
 }
 .carousel-caption .content {
   margin: 0;
