@@ -291,7 +291,7 @@ button.btn.btn-outline-success {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
- 
+ max-width: 600px;
 }
 
 .carousel-item h6 {
