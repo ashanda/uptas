@@ -287,13 +287,14 @@ button.btn.btn-outline-success {
   left: 0;
   width: 60%;
   background: #ffffff8c; */
+}
+.carousel-caption .content {
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  
 }
 
 .carousel-item h6 {
@@ -308,14 +309,14 @@ button.btn.btn-outline-success {
   color: #ffffff;
   line-height: 1.1;
   text-transform: capitalize;
-  text-shadow: 0px 0px 12px rgba(0,0,0,0.55);
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.55);
 }
 
 .carousel-item p {
   color: #ffffff;
   /* font-size: 39.06px; */
-  font-size:32px ;
-  text-shadow: 0px 0px 12px rgba(0,0,0,0.55);
+  font-size: 32px;
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.55);
 }
 
 /* ----------------------------------------------------CARD SECTION------------------------------------------------------ */
@@ -730,7 +731,7 @@ button.btn.btn-outline-success {
   .top_slider {
     height: 170vw;
   }
-  .carousel-item{
+  .carousel-item {
     height: 150vw;
   }
   /* .carousel-caption {
