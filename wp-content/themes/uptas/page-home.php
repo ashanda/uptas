@@ -28,12 +28,10 @@ get_header();  ?>
         ?>
           <div class="carousel-item <?php echo $active; ?>" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('<?php echo $image['url']; ?>')">
             <img src="<?php echo $image['url']; ?>" class="d-block" alt="..." />
-            <div class="carousel-caption d-block container w-100">
-              <div class="content">
-                <h6><?php the_sub_field('sub_title'); ?></h6>
-                <h1><?php the_sub_field('main_title'); ?></h1>
-                <p><?php the_sub_field('description'); ?></p>
-              </div>
+            <div class="carousel-caption d-block container">
+              <h6><?php the_sub_field('sub_title'); ?></h6>
+              <h1><?php the_sub_field('main_title'); ?></h1>
+              <p><?php the_sub_field('description'); ?></p>
             </div>
           </div>
         <?php
