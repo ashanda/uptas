@@ -277,7 +277,7 @@ button.btn.btn-outline-success {
 }
 
 .carousel-caption {
-  text-align: left;
+  /* text-align: left;
   position: absolute;
   top: 12vw;
   z-index: 10;
@@ -286,7 +286,14 @@ button.btn.btn-outline-success {
   color: #fff;
   left: 0;
   width: 60%;
-  background: #ffffff8c;
+  background: #ffffff8c; */
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
 }
 
 .carousel-item h6 {
@@ -723,12 +730,12 @@ button.btn.btn-outline-success {
   .carousel-item{
     height: 150vw;
   }
-  .carousel-caption {
+  /* .carousel-caption {
     top: unset;
     bottom: 0;
     width: 95vw;
     margin-left: 0;
-  }
+  } */
   .carousel-item img {
     width: 100%;
     height: auto;

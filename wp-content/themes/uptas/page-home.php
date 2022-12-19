@@ -26,7 +26,7 @@ get_header();  ?>
             $active = '';
           }
         ?>
-          <div class="carousel-item <?php echo $active; ?>" style="background-image: url('<?php echo $image['url']; ?>')">
+          <div class="carousel-item <?php echo $active; ?>" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('<?php echo $image['url']; ?>')">
             <img src="<?php echo $image['url']; ?>" class="d-block" alt="..." />
             <div class="carousel-caption d-block container">
               <h6><?php the_sub_field('sub_title'); ?></h6>
