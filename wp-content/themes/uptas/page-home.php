@@ -197,45 +197,42 @@ get_header();  ?>
 <!-- qualities secttion start -->
 <div class="qualities section" id="qualities">
   <div class="container">
+    <div class="qua_head">
+      <h1 class="title pb-2">
+        <?php the_field('section_02_title'); ?>
+      </h1>
+      <p class="description">
+        <?php the_field('section_02_descriptions'); ?>
+      </p>
+    </div>
     <div class="row">
-      <div class="col-sm-6">
-        <div class="qualities-left mt-3 px-1">
-          <h1 class="title pb-3">
-            <?php the_field('section_02_title'); ?>
-          </h1>
-          <p class="description">
-            <?php the_field('section_02_descriptions'); ?>
-          </p>
-        </div>
-      </div>
 
-      <div class="col-sm-6">
-        <div class="qualities-right mt-4">
-          <?php if (have_rows('qulities')) : ?>
-            <?php while (have_rows('qulities')) : the_row();
-              $image = get_sub_field('image');
-            ?>
-              <div class="sub-content pb-4">
-                <div class="row">
-                  <div class="col-sm-3">
-                    <div class="image text-center">
-                      <img class="img-fluid" src="<?php echo $image['url']; ?>" alt="" />
-                    </div>
+      <div class="qualities-right mt-4">
+        <?php if (have_rows('qulities')) : ?>
+          <?php while (have_rows('qulities')) : the_row();
+            $image = get_sub_field('image');
+          ?>
+            <div class="sub-content pb-4">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="image text-center">
+                    <img class="img-fluid" src="<?php echo $image['url']; ?>" alt="" />
                   </div>
-                  <div class="col-sm-9">
-                    <div class="details">
-                      <h4><?php the_sub_field('title'); ?></h4>
-                      <p>
-                        <?php the_sub_field('caption'); ?>
-                      </p>
-                    </div>
+                </div>
+                <div class="col-sm-9">
+                  <div class="details">
+                    <h4><?php the_sub_field('title'); ?></h4>
+                    <p>
+                      <?php the_sub_field('caption'); ?>
+                    </p>
                   </div>
                 </div>
               </div>
-            <?php endwhile; ?>
-          <?php endif; ?>
-        </div>
+            </div>
+          <?php endwhile; ?>
+        <?php endif; ?>
       </div>
+
     </div>
   </div>
 </div>
@@ -290,7 +287,7 @@ get_header();  ?>
 <!-- tutor specialist area end -->
 
 <!-- form_sec area start -->
-<div class="form_sec section" id="form_sec">
+<div class="form_sec section d-none" id="form_sec">
   <div class="container">
     <div class="row achie mt-4">
       <div class="col-sm-5">
