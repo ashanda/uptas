@@ -13,7 +13,7 @@ get_header();  ?>
 </div>
 <div class="review section">
     <div class="container">
-
+        <?php echo do_shortcode('[grw id="417"]'); ?>
     </div>
 </div>
 
