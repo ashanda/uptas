@@ -268,11 +268,11 @@ button.btn.btn-outline-success {
   background-size: cover; */
   /* height: 962px; */
 }
-.top_slider .row{
-
+.top_slider .row {
+  height: 27vw;
 }
 .carousel-item {
-  height: 836px;
+  height: 574px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -325,7 +325,7 @@ button.btn.btn-outline-success {
 
 /* ----------------------------------------------------CARD SECTION------------------------------------------------------ */
 .card-item .card-set {
-  margin-top: -126px;
+  margin-top: 50px;
 }
 .card-item .card {
   width: 33.33%;
@@ -735,7 +735,7 @@ button.btn.btn-outline-success {
   /* .top_slider {
     height: 170vw;
   } */
-  
+
   .carousel-item {
     height: 150vw;
   }
@@ -1457,4 +1457,15 @@ p.card-text {
   color: #fff;
   background: #163dac;
   border-color: #198754;
+}
+/* wide size*/
+@media screen and (max-width: 1560px) {
+  .carousel-item{
+    height: 665px;
+  }
+}
+@media screen and (max-width: 1248px) {
+  .carousel-item{
+    height: 665px;
+  }
 }
