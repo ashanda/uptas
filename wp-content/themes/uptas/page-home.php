@@ -197,7 +197,7 @@ get_header();  ?>
 <!-- qualities secttion start -->
 <div class="qualities section" id="qualities">
   <div class="container">
-    <div class="qua_head">
+    <div class="qua_head text-center mb-4">
       <h1 class="title pb-2">
         <?php the_field('section_02_title'); ?>
       </h1>
