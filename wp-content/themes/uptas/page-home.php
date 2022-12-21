@@ -5,50 +5,70 @@ Template Name: Home
 get_header();  ?>
 
 <!-- Banner Slider Start -->
-<div class="top_slider" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/img/carosel_back.png')">
-  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <?php if (have_rows('home_banner')) :
-        $i = 0;
-        $active;
-      ?>
+<div class="top_slider">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="top_form">
+        <div class="form">
+          <h2><?php the_field('section_05_form_title'); ?></h2>
+          <p class="py-3">
+            <?php the_field('section_05_form_description'); ?>
+          </p>
 
-        <?php while (have_rows('home_banner')) : the_row();
-          $image = get_sub_field('banner_image');
-          if ($i == 0) {
-            $active = 'active';
-          } else {
-            $active = '';
-          }
-        ?>
-          <div class="carousel-item <?php echo $active; ?>" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('<?php echo $image['url']; ?>')">
-            <img src="<?php echo $image['url']; ?>" class="d-block" alt="..." />
-            <div class="carousel-caption d-block container">
-              <h6><?php the_sub_field('sub_title'); ?></h6>
-              <h1><?php the_sub_field('main_title'); ?></h1>
-              <p><?php the_sub_field('description'); ?></p>
-            </div>
-          </div>
-        <?php
-          $i++;
-        endwhile; ?>
-
-      <?php endif; ?>
+          <?php echo do_shortcode('[contact-form-7 id="130" title="Get a Free Session!"]'); ?>
+          <p class="last-des">
+            <?php the_field('section_05_form_agree_text'); ?>
+          </p>
+        </div>
+      </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <div class="col-md-8">
+      <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <?php if (have_rows('home_banner')) :
+            $i = 0;
+            $active;
+          ?>
+
+            <?php while (have_rows('home_banner')) : the_row();
+              $image = get_sub_field('banner_image');
+              if ($i == 0) {
+                $active = 'active';
+              } else {
+                $active = '';
+              }
+            ?>
+              <div class="carousel-item <?php echo $active; ?>" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('<?php echo $image['url']; ?>')">
+                <img src="<?php echo $image['url']; ?>" class="d-block" alt="..." />
+                <div class="carousel-caption d-block container">
+                  <h6><?php the_sub_field('sub_title'); ?></h6>
+                  <h1><?php the_sub_field('main_title'); ?></h1>
+                  <p><?php the_sub_field('description'); ?></p>
+                </div>
+              </div>
+            <?php
+              $i++;
+            endwhile; ?>
+
+          <?php endif; ?>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
   </div>
+
 
   <!-- Slider -->
 </div>
@@ -99,7 +119,8 @@ get_header();  ?>
             <div class="learning-content">
               <h2>
                 <!-- 0<?php echo $i; ?>.  -->
-                <span><?php the_sub_field('title'); ?></span></h2>
+                <span><?php the_sub_field('title'); ?></span>
+              </h2>
             </div>
             <p class="sub-content">
               <?php the_sub_field('caption'); ?>

@@ -635,28 +635,28 @@ button.btn.btn-outline-success {
   font-size: 14px;
   line-height: 17px;
 }
-.form_sec-right .form {
+.top_form .form {
   padding: 20px;
   background-color: #173ead;
 }
-.form_sec-right .form h2 {
+.top_form .form h2 {
   font-weight: 700;
   font-size: 61.04px;
   line-height: 74px;
   color: #fff;
   text-transform: capitalize;
 }
-.form_sec-right .form p {
+.top_form .form p {
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
   color: #fff;
 }
-.form_sec-right .form-group {
+.top_form .form-group {
   margin-bottom: 15px;
 }
-.form_sec-right input,
-.form_sec-right button {
+.top_form input,
+.top_form button {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -664,7 +664,7 @@ button.btn.btn-outline-success {
   padding: 10px;
   background-color: #fff;
 }
-.form_sec-right .form .last-des {
+.top_form .form .last-des {
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
