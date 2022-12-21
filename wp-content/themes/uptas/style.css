@@ -262,11 +262,14 @@ button.btn.btn-outline-success {
 /* ----------------------------------------------------CAROUSEL------------------------------------------------------ */
 
 .top_slider {
-  background-image: url(../img/main_banner.jpg);
+  /* background-image: url(../img/main_banner.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  height: 962px;
+  background-size: cover; */
+  /* height: 962px; */
+}
+.top_slider .row{
+
 }
 .carousel-item {
   height: 836px;
@@ -729,9 +732,9 @@ button.btn.btn-outline-success {
     box-shadow: 40px -40px 0px 1px #173ead;
     margin-top: 40px;
   }
-  .top_slider {
+  /* .top_slider {
     height: 170vw;
-  }
+  } */
   .carousel-item {
     height: 150vw;
   }
