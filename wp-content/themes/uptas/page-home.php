@@ -212,9 +212,11 @@ get_header();  ?>
           <?php while (have_rows('qulities')) : the_row();
             $image = get_sub_field('image');
           ?>
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
             <div class="sub-content pb-4">
               <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-3">
                   <div class="image text-center">
                     <img class="img-fluid" src="<?php echo $image['url']; ?>" alt="" />
                   </div>
@@ -229,6 +231,9 @@ get_header();  ?>
                 </div>
               </div>
             </div>
+            </div>
+          </div>
+            
           <?php endwhile; ?>
         <?php endif; ?>
       </div>
