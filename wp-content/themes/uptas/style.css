@@ -268,9 +268,7 @@ button.btn.btn-outline-success {
   background-size: cover; */
   /* height: 962px; */
 }
-.top_slider .row {
-  height: 27vw;
-}
+
 .carousel-item {
   height: 574px;
   width: 100%;
@@ -1467,5 +1465,10 @@ p.card-text {
 @media screen and (max-width: 1248px) {
   .carousel-item{
     height: 665px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .form_col{
+    order: 2;
   }
 }

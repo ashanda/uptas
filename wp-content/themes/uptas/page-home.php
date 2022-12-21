@@ -7,7 +7,7 @@ get_header();  ?>
 <!-- Banner Slider Start -->
 <div class="top_slider">
   <div class="row ">
-    <div class="col-lg-3">
+    <div class="col-lg-3 form_col">
       <div class="top_form">
         <div class="form">
           <h2><?php the_field('section_05_form_title'); ?></h2>
@@ -22,7 +22,7 @@ get_header();  ?>
         </div>
       </div>
     </div>
-    <div class="col-lg-9">
+    <div class="col-lg-9 slider_col">
       <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
