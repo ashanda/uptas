@@ -50,3 +50,9 @@ function section() {
 }
 
 window.addEventListener("scroll", section);
+
+
+// override google review secrion styles
+
+const avatar = document.querySelector('.rplg-review-avatar');
+avatar.style.width = '100%!important';
