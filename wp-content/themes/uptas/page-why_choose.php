@@ -39,12 +39,12 @@ get_header();  ?>
     <div class="row">
       <?php if (have_rows('repeater_contents')) : ?>
         <?php while (have_rows('repeater_contents')) : the_row(); ?>
-          <div class="col-sm-6 wc_col">
+          <div class="col-md-6 wc_col">
             <div class="wc_sec2_left_img">
               <img src="<?php the_sub_field('image'); ?>" alt="" class="img-fluid">
             </div>
           </div>
-          <div class="col-sm-6 wc_col">
+          <div class="col-md-6 wc_col">
             <div class="wc_sec2_right_capt">
               <span class="blue fw-bold">
                 <?php the_sub_field('sub_title'); ?>

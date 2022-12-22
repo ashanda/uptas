@@ -1266,7 +1266,7 @@ p.card-text {
 }
 
 /* wc_sec2 */
-.wc_sec2_left_img img {
+.wc_col:nth-child() .wc_sec2_left_img img {
   width: 100%;
 }
 .wc_sec2_right_capt {
@@ -1327,6 +1327,9 @@ p.card-text {
   }
   .wc_bot_sec iframe {
     height: 50vw;
+  }
+  .wc_col:nth-child(4) {
+    order: 3;
   }
 }
 
