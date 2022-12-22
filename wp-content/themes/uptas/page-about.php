@@ -45,7 +45,7 @@ get_header();  ?>
             </div>
           </div>
           <div class="col-md-4 col-sm-12">
-            <?php if (get_sub_field('image_01')) : ?>
+            <?php if (get_sub_field('tutor_image')) : ?>
               <div class="capt_img mob-pad" style="background-image: url(<?php the_sub_field('tutor_image'); ?>);">
               <?php endif; ?>
               </div>
