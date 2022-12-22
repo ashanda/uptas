@@ -15,28 +15,54 @@ Template Name: FAQ
                     <h5 class="heading-questioner">CLASS INFORMATION</h5>
                     <div class="space">       
                     </div>
-                    <div class="row mt-3">
-                    <?php 
-                        $args = array(  
-                                'post_type' => 'faqs',
-                                'post_status' => 'publish',
-                                'posts_per_page' => -1, 
-                                'orderby' => 'date', 
-                                'order' => 'ASC', 
-                            );
-                            $loop = new WP_Query( $args ); 
-                        while ( $loop->have_posts() ) : $loop->the_post();
-                    
-                    ?>
-                        <div class="col-sm-6 content">
-                            <h6 class="title"><?php the_title();?></h6>
-                            <?php the_content();?>
-                        </div>
-                        <?php 
-                        endwhile;
-                        wp_reset_postdata(); 
-                        ?> 
+                    <div class="accordion" id="accordionExample">
+              <?php
+              $args = array(
+                'post_type' => 'faqs',
+                'post_status' => 'publish',
+                'posts_per_page' => -1,
+                'orderby' => 'date',
+                'order' => 'ASC',
+              );
+
+              $loop = new WP_Query($args);
+              $i = 0;
+              $collaps;
+              $expand;
+              while ($loop->have_posts()) : $loop->the_post();
+                if ($i == 0) {
+                  $collaps = 'show';
+                  $expand = 'true';
+                  $collapsed = '';
+                } else {
+                  $collaps = '';
+                  $expand = 'false';
+                  $collapsed = 'collapsed';
+                }
+              ?>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="heading<?php echo $i; ?>">
+                    <button class="accordion-button <?php echo $collapsed; ?>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $i; ?>" aria-expanded="<?php echo $expand; ?>" aria-controls="collapse<?php echo $i; ?>">
+                      <?php the_title(); ?>
+                    </button>
+                  </h2>
+                  <div id="collapse<?php echo $i; ?>" class="accordion-collapse collapse <?php echo $collaps; ?>" aria-labelledby="heading<?php echo $i; ?>" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <?php the_content(); ?>
                     </div>
+                  </div>
+                </div>
+
+              <?php
+                $i++;
+              endwhile;
+
+              wp_reset_postdata();
+
+              ?>
+
+            </div>
             
                 </div>
             </div>

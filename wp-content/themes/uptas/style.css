@@ -912,6 +912,7 @@ button.btn.btn-outline-success {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  height: 500px;
 }
 
 /* ----------------------------------------------------Bottom banner------------------------------------------------------ */
@@ -1066,7 +1067,14 @@ p.para {
   font-size: 14px;
   text-align: justify;
 }
-
+.Question-page .accordion-item {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+.Question-page .accordion-button {
+  font-weight: bold;
+  color: rgb(82, 82, 82);
+}
 @media screen and (max-width: 567px) {
   h5.heading-questioner {
     font-size: 16px;

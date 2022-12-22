@@ -35,12 +35,12 @@ Template Name: About
   <div class="capt_section section">
     <div class="container">
       <div class="row mt-5 cpt">
-        <div class="col-sm-8">
+        <div class="col-md-8 col-sm-12">
           <div class="capt">
           <?php the_field('section_description');?>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4 col-sm-12">
         <?php if( get_field('image_01') ): ?>
            <div class="capt_img mob-pad" style="background-image: url(<?php the_field('image_01'); ?>);">
         <?php endif; ?>
