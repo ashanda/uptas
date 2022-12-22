@@ -1503,3 +1503,10 @@ p.card-text {
     order: 2;
   }
 }
+
+/* Google review section */
+.wp-google-list
+
+.wp-google-left img{
+  border-radius: 0 !important;
+}
