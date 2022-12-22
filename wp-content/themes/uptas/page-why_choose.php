@@ -12,22 +12,22 @@ get_header();  ?>
         <div class="col-sm-6 col-md-3">
           <div class="sing_sec">
             <span class="blue">
-              <?php the_field('sub_title');?>
+              <?php the_field('sub_title'); ?>
             </span>
-            <h1 class="mt-3"><?php the_field('main_title');?></h1>
+            <h1 class="mt-3"><?php the_field('main_title'); ?></h1>
           </div>
         </div>
-        <?php if( have_rows('top_block') ): ?>
-            <?php while( have_rows('top_block') ): the_row();?>
+        <?php if (have_rows('top_block')) : ?>
+          <?php while (have_rows('top_block')) : the_row(); ?>
             <div class="col-sm-6 col-md-3">
-                <div class="sing_sec">
-                  <span class="blue">
+              <div class="sing_sec">
+                <span class="blue">
                   <?php the_sub_field('title'); ?>
-                  </span>
-                  <p class="mt-3"><?php the_sub_field('caption'); ?></p>
-                </div>
+                </span>
+                <p class="mt-3"><?php the_sub_field('caption'); ?></p>
               </div>
-            <?php endwhile; ?>
+            </div>
+          <?php endwhile; ?>
         <?php endif; ?>
       </div>
     </div>
@@ -36,7 +36,34 @@ get_header();  ?>
 
 <div class="wc_sec2 mt-2 section">
   <div class="container">
-    <div class="row">
+
+
+    <?php if (have_rows('repeater_contents')) : ?>
+      <?php while (have_rows('repeater_contents')) : the_row(); ?>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="wc_sec2_left_img">
+              <img src="<?php the_sub_field('image'); ?>" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="wc_sec2_right_capt">
+              <span class="blue fw-bold">
+                <?php the_sub_field('sub_title'); ?>
+              </span>
+              <h3 class="my-3 fw-bold">
+                <?php the_sub_field('title'); ?>
+              </h3>
+              <?php the_sub_field('desctiption'); ?>
+            </div>
+          </div>
+        </div>
+
+      <?php endwhile; ?>
+    <?php endif; ?>
+
+    <!-- <div class="row">
       <div class="col-sm-6">
         <div class="wc_sec2_left_img">
           <img src="<?php the_field('section_01_image'); ?>" alt="" class="img-fluid">
@@ -45,12 +72,12 @@ get_header();  ?>
       <div class="col-sm-6">
         <div class="wc_sec2_right_capt">
           <span class="blue fw-bold">
-          <?php the_field('section_01_sub_title');?>
+            <?php the_field('section_01_sub_title'); ?>
           </span>
           <h3 class="my-3 fw-bold">
-          <?php the_field('section_01_title');?>
+            <?php the_field('section_01_title'); ?>
           </h3>
-          <?php the_field('section_01_description');?>
+          <?php the_field('section_01_description'); ?>
         </div>
       </div>
     </div>
@@ -58,12 +85,12 @@ get_header();  ?>
       <div class="col-sm-6">
         <div class="wc_sec2_right_capt">
           <span class="blue fw-bold">
-          <?php the_field('section_02_sub_title');?>
+            <?php the_field('section_02_sub_title'); ?>
           </span>
           <h3 class="my-3 fw-bold">
-          <?php the_field('section_02_title');?>
+            <?php the_field('section_02_title'); ?>
           </h3>
-          <?php the_field('section_02_description');?>
+          <?php the_field('section_02_description'); ?>
         </div>
       </div>
       <div class="col-sm-6">
@@ -72,7 +99,7 @@ get_header();  ?>
         </div>
       </div>
 
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -83,7 +110,7 @@ get_header();  ?>
         <td class="out_table_td text-center text-sm-start">
           <span class="blue"><?php the_field('section_03_sub_title'); ?></span>
           <h3 class="my-3">
-          <?php the_field('section_03_title'); ?>
+            <?php the_field('section_03_title'); ?>
           </h3>
           <p><?php the_field('section_03_description'); ?></p>
         </td>
@@ -131,7 +158,7 @@ get_header();  ?>
       <div class="col-sm-6">
         <div class="video_card mb-2">
           <div class="card">
-           <?php the_field('section_04_left_video_frame'); ?>
+            <?php the_field('section_04_left_video_frame'); ?>
             <div class="card-body">
               <h5 class="card-title"><?php the_field('section_04_left_title'); ?></h5>
               <p class="card-text"><?php the_field('section_04_left_description'); ?></p>
@@ -142,7 +169,7 @@ get_header();  ?>
       <div class="col-sm-6">
         <div class="video_card mb-2">
           <div class="card">
-          <?php the_field('section_04_right_video_frame'); ?>
+            <?php the_field('section_04_right_video_frame'); ?>
             <div class="card-body">
               <h5 class="card-title"><?php the_field('section_04_right_title'); ?></h5>
               <p class="card-text"><?php the_field('section_04_right_description'); ?></p>
