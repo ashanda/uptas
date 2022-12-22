@@ -36,16 +36,15 @@ get_header();  ?>
 
 <div class="wc_sec2 mt-2 section">
   <div class="container">
-    <?php if (have_rows('repeater_contents')) : ?>
-      <?php while (have_rows('repeater_contents')) : the_row(); ?>
-
-        <div class="row">
-          <div class="col-sm-6 img-col">
+    <div class="row">
+      <?php if (have_rows('repeater_contents')) : ?>
+        <?php while (have_rows('repeater_contents')) : the_row(); ?>
+          <div class="col-sm-6 wc_col">
             <div class="wc_sec2_left_img">
               <img src="<?php the_sub_field('image'); ?>" alt="" class="img-fluid">
             </div>
           </div>
-          <div class="col-sm-6 capt-col">
+          <div class="col-sm-6 wc_col">
             <div class="wc_sec2_right_capt">
               <span class="blue fw-bold">
                 <?php the_sub_field('sub_title'); ?>
@@ -56,10 +55,9 @@ get_header();  ?>
               <?php the_sub_field('desctiption'); ?>
             </div>
           </div>
-        </div>
-      <?php endwhile; ?>
-    <?php endif; ?>
-
+        <?php endwhile; ?>
+      <?php endif; ?>
+    </div>
     <!-- <div class="row">
       <div class="col-sm-6">
         <div class="wc_sec2_left_img">
