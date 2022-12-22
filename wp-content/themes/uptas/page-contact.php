@@ -15,7 +15,7 @@ get_header();  ?>
       <?php the_field('google_map_2'); ?>
     </div>
   <?php endif; ?>
-  <div class="contact_sec section">
+  <div id="contact_sec" class="contact_sec section">
     <div class="container">
       <div class="row">
         <!-- <div class="col-sm-12 col-md-6">
