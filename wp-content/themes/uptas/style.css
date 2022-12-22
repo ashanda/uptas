@@ -1504,7 +1504,12 @@ p.card-text {
   }
 }
 
+.sign_up{
+  position: relative;
+}
 .sign_up .btn{
   float: right;
-  cursor: pointer;
+  z-index: 99999;
+  position: absolute;
+  right: 0;
 }
