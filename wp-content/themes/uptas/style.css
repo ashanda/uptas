@@ -1252,6 +1252,8 @@ p.card-text {
 /*----------------------------------Why Choose Us-----------------------------------------------------------------------------*/
 .page-template-page-why_choose .blue {
   color: #6b8be6;
+  font-size: 18px;
+  font-weight: bold;
 }
 .wc_sec1 {
   background-color: #f8fafc;
@@ -1466,17 +1468,17 @@ p.card-text {
 }
 /* wide size*/
 @media screen and (max-width: 1560px) {
-  .carousel-item{
+  .carousel-item {
     height: 665px;
   }
 }
 @media screen and (max-width: 1248px) {
-  .carousel-item{
+  .carousel-item {
     height: 665px;
   }
 }
 @media screen and (max-width: 991px) {
-  .form_col{
+  .form_col {
     order: 2;
   }
 }
