@@ -1332,6 +1332,12 @@ p.card-text {
     order: 3;
   }
 }
+@media screen and (min-width: 768px) {
+  .wc_sec2 .row:nth-child(2){
+    flex-direction: row-reverse
+  }
+}
+
 
 /*----------------------------------Why Choose Us End ----------------------------------------------------------------------------*/
 
