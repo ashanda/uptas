@@ -35,8 +35,8 @@ get_header();  ?>
 <div class="capt_section section">
   <div class="container">
     <!-- REPEATER -->
-    <?php if (have_rows('repeater_contents')) : ?>
-      <?php while (have_rows('repeater_contents')) : the_row(); ?>
+    <?php if (have_rows('tutors_section')) : ?>
+      <?php while (have_rows('tutors_section')) : the_row(); ?>
 
         <div class="row mt-5 cpt">
           <div class="col-md-8 col-sm-12">
