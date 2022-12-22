@@ -13,7 +13,7 @@ get_header();  ?>
 </div>
 <div class="container">
     <div class="sign_up">
-        <a href="<?php the_field('sign_up_button'); ?>" class="btn btn-primary">Sign Up</a>
+        <a href="<?php the_field('sign_up_button'); ?>" target="_blank" class="btn btn-primary">Sign Up</a>
     </div>
 </div>
 <div class="review section">
