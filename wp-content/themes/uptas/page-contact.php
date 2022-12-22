@@ -9,13 +9,16 @@ get_header();  ?>
 
   <div id="map-container-google-1" class="z-depth-1-half map-container">
     <?php the_field('google_map'); ?>
-
   </div>
-
+  <?php if (get_field('google_map_2')) : ?>
+    <div id="map-container-google-1" class="z-depth-1-half map-container mt-3">
+      <?php the_field('google_map_2'); ?>
+    </div>
+  <?php endif; ?>
   <div class="contact_sec section">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-6">
+        <!-- <div class="col-sm-12 col-md-6">
           <div class="left_sec">
             <p class="sub_head">
               faqs
@@ -71,8 +74,8 @@ get_header();  ?>
 
             </div>
           </div>
-        </div>
-        <div class="col-sm-12 col-md-6">
+        </div> -->
+        <div class="col-sm-12">
           <div class="right_sec mt-5 mt-sm-0">
             <p class="sub_head">
               Contact Us
