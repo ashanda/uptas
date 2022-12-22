@@ -1270,7 +1270,7 @@ p.card-text {
   width: 100%;
 }
 .wc_sec2_right_capt {
-  padding: 50px;
+  padding: 0 50px;
 }
 .wc_sec2_right_capt h3 {
   color: #6b8be6;
@@ -1321,6 +1321,9 @@ p.card-text {
 .wc_bot_sec iframe {
   height: 20vw;
 }
+.wc_sec2 img{
+  width: 100%;
+}
 @media screen and (max-width: 768px) {
   .out_table_td {
     display: block;
@@ -1333,11 +1336,12 @@ p.card-text {
   }
 }
 @media screen and (min-width: 768px) {
-  .wc_sec2 .row:nth-child(2){
-    flex-direction: row-reverse
+  .wc_sec2 .row:nth-child(2),
+  .wc_sec2 .row:nth-child(4),
+  .wc_sec2 .row:nth-child(6) {
+    flex-direction: row-reverse;
   }
 }
-
 
 /*----------------------------------Why Choose Us End ----------------------------------------------------------------------------*/
 
