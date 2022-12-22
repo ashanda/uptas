@@ -1281,7 +1281,7 @@ p.card-text {
   padding: 100px 0;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 .wc_mid_banner table {
   width: 100%;
