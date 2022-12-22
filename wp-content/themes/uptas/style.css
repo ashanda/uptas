@@ -1504,3 +1504,6 @@ p.card-text {
   }
 }
 
+.sign_up .btn{
+  float: right;
+}
