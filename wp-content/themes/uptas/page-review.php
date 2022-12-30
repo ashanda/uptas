@@ -11,11 +11,11 @@ get_header();  ?>
 <div class="review_top py-4 text-center">
     <h2>WHY WE ARE BEST AT TEACHING</h2>
 </div>
-<div class="container">
+<!-- <div class="container">
     <div class="sign_up">
         <a href="<?php the_field('sign_up_button'); ?>" target="_blank" class="btn btn-primary">Sign Up</a>
     </div>
-</div>
+</div> -->
 <div class="review section">
     <div class="container">
         <!-- <?php echo do_shortcode('[grw id="417"]'); ?> -->
