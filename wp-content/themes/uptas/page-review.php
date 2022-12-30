@@ -18,9 +18,9 @@ get_header();  ?>
 </div>
 <div class="review section">
     <div class="container">
-        <?php echo do_shortcode('[grw id="417"]'); ?>
+        <!-- <?php echo do_shortcode('[grw id="417"]'); ?> -->
         <!-- new custom fields -->
-        <div class="revw_sec p-5">
+        <div class="revw_sec p-3 p-sm-5 mb-3">
             <?php if (have_rows('google_reviews')) : ?>
                 <?php while (have_rows('google_reviews')) : the_row();  ?>
                     <div class="row">
@@ -31,7 +31,7 @@ get_header();  ?>
                         </div>
                         <div class="col-md-8">
                             <div class="rew_sec">
-                                <div class="nme">
+                                <div class="nme mt-5 md-md-0">
                                     <p class="text-secondary fw-bold mb-1"><?php the_sub_field('name'); ?></p>
                                     <div class="row">
                                         <div class="col-10">
