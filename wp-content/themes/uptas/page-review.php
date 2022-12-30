@@ -36,7 +36,7 @@ get_header();  ?>
                                     <p>“You believed in me and helped me to understand Chemistry much, much better”</p>
                                 </div>
                                 <div class="col-2 text-end">
-                                    <a class="btn btn-sm text-small" href=""><img src="inc/img/sign-up-button-50.png" alt=""></a>
+                                    <a class="btn btn-sm text-small" href=""><img src="<?php echo get_template_directory_uri(); ?>/inc/img/sign-up-button-50.png" alt=""></a>
                                 </div>
                             </div>
                             <p class="desc my-3 p-3">
