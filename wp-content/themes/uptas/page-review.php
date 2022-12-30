@@ -25,8 +25,8 @@ get_header();  ?>
                 <?php while (have_rows('google_reviews')) : the_row();  ?>
                     <div class="row pb-4 mb-4 border-bottom">
                         <div class="col-md-4">
-                            <div class="img_sec">
-                                <img class="img-fluid m-3" src="<?php the_sub_field('image'); ?>" alt="">
+                            <div class="img_sec p-4">
+                                <img class="img-fluid m-3 w-100" src="<?php the_sub_field('image'); ?>" alt="">
                             </div>
                         </div>
                         <div class="col-md-8">
