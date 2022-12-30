@@ -270,10 +270,10 @@ button.btn.btn-outline-success {
 }
 @media screen and (min-width: 991px) {
   .top_slider .form_col {
-    padding-right: 0;
+    padding-left: 0;
   }
   .top_slider .slider_col {
-    padding-left: 0;
+    padding-right: 0;
   }
 }
 
