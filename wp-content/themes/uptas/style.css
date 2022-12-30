@@ -1514,7 +1514,8 @@ p.card-text {
   right: 0;
 }
 .revw_sec {
-  border: 1px rgb(0 0 0 / 40%) solid;
+  border: 1px rgb(155 155 155 / 40%) solid;
+  border-radius: 5px;
 }
 .img_sec img {
   -webkit-box-shadow: 15px 15px 0px 5px #b2b2b2;
