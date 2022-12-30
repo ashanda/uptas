@@ -20,10 +20,10 @@ get_header();  ?>
     <div class="container">
         <!-- <?php echo do_shortcode('[grw id="417"]'); ?> -->
         <!-- new custom fields -->
-        <div class="revw_sec p-3 p-sm-5 mb-3">
+        <div class="revw_sec p-3 p-sm-5">
             <?php if (have_rows('google_reviews')) : ?>
                 <?php while (have_rows('google_reviews')) : the_row();  ?>
-                    <div class="row">
+                    <div class="row pb-4 mb-4 border-bottom">
                         <div class="col-md-4">
                             <div class="img_sec">
                                 <img class="img-fluid m-3" src="<?php the_sub_field('image'); ?>" alt="">
@@ -37,7 +37,7 @@ get_header();  ?>
                                         <div class="col-10">
                                             <p>“<?php the_sub_field('caption'); ?>”</p>
                                         </div>
-                                        <div class="col-2 text-end">
+                                        <div class="col-2 text-end p-0">
                                             <a class="btn btn-sm text-small" href="<?php echo get_home_url(); ?>/contact-us/#contact_sec"><img src="<?php echo get_template_directory_uri(); ?>/inc/img/sign-up-button-50.png" alt=""></a>
                                         </div>
                                     </div>
