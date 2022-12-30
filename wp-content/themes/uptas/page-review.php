@@ -20,7 +20,7 @@ get_header();  ?>
     <div class="container">
         <?php echo do_shortcode('[grw id="417"]'); ?>
         <!-- new custom fields -->
-        <div class="revw_sec">
+        <div class="revw_sec p-5">
             <div class="row">
                 <div class="col-md-4">
                     <div class="img_sec">
@@ -35,11 +35,11 @@ get_header();  ?>
                                 <div class="col-10">
                                     <p>“You believed in me and helped me to understand Chemistry much, much better”</p>
                                 </div>
-                                <div class="col-2">
-                                    <a class="btn btn-sm text-small" href="">Sign up <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                <div class="col-2 text-end">
+                                    <a class="btn btn-sm text-small" href=""><img src="inc/img/sign-up-button-50.png" alt=""></a>
                                 </div>
                             </div>
-                            <p class="desc my-3">
+                            <p class="desc my-3 p-3">
                                 Patient teachers are the BEST but the free food and drinks are pretty good loo hehe! I used to hate chemistry when I was in Integrated Programme (IP) Year 3 & 4. My chemistry tutor in IP 4 even advised me not to touch chemistry at JC level. You were super patient and helpful throughout my 2 years in Uptas. More importantly, you believed in me. You helped me to understand Chemistry much, much better.
 
                                 You were clear and enthusiastic in your teaching and explained it in more simplistic ways to aid understanding. I would recommend all my friends who need help in Chemistry and don’t like it to join ? Throwing back to the times when you could repeat over and over again and slowly teach me concepts without getting upset, I am extremely thankful that I got to know you. I will never forget the extra lessons to help boost our chemistry grade. Thank you Ms Tham, you are really like a good friend which makes lesson fun and comfortable.
