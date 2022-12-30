@@ -41,9 +41,9 @@ get_header();  ?>
                                             <a class="btn btn-sm text-small" href="<?php echo get_home_url(); ?>/contact-us/#contact_sec"><img src="<?php echo get_template_directory_uri(); ?>/inc/img/sign-up-button-50.png" alt=""></a>
                                         </div>
                                     </div>
-                                    <p class="desc my-3 p-3">
+                                    <div class="desc my-3 p-3">
                                         <?php the_sub_field('description'); ?>
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
