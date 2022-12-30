@@ -38,7 +38,7 @@ get_header();  ?>
                                             <p>“<?php the_sub_field('caption'); ?>”</p>
                                         </div>
                                         <div class="col-2 text-end">
-                                            <a class="btn btn-sm text-small" href=""><img src="<?php echo get_template_directory_uri(); ?>/inc/img/sign-up-button-50.png" alt=""></a>
+                                            <a class="btn btn-sm text-small" href="<?php echo get_home_url(); ?>/contact-us/#contact_sec"><img src="<?php echo get_template_directory_uri(); ?>/inc/img/sign-up-button-50.png" alt=""></a>
                                         </div>
                                     </div>
                                     <p class="desc my-3 p-3">
