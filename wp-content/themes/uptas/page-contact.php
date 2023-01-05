@@ -15,7 +15,30 @@ get_header();  ?>
       <?php the_field('google_map_2'); ?>
     </div>
   <?php endif; ?>
-  <div id="contact_sec" class="contact_sec section">
+  <div id="contact_sec" class="contact_sec">
+    <!-- Modal start -->
+    <!-- <div class="container">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Contact
+        Us</button>
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Contact Us Form</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+              <form>
+                <?php echo do_shortcode('[contact-form-7 id="451" title="Contact_popup"]'); ?>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- Modal end -->
     <div class="container">
       <div class="row">
         <!-- <div class="col-sm-12 col-md-6">
@@ -75,7 +98,7 @@ get_header();  ?>
             </div>
           </div>
         </div> -->
-        
+
         <div class="col-sm-12">
           <div class="right_sec mt-5 mt-sm-0">
             <p class="sub_head">
@@ -89,8 +112,10 @@ get_header();  ?>
         </div>
       </div>
     </div>
-  </div>
 
-</div>
-<!--Google Maps-->
-<?php get_footer(); ?>
+
+  </div>
+  <!--Google Maps-->
+
+
+  <?php get_footer(); ?>

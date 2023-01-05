@@ -1550,7 +1550,7 @@ p.card-text {
 }
 
 .modal-content {
-    border: 6px solid #090983;
+    /* border: 6px solid #090983; */
 }
 
 input.form-control {
