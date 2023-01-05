@@ -1537,3 +1537,31 @@ p.card-text {
   background-position: center;
   background-size: cover;
 }
+
+/* /modal/ */
+.modal-header{
+    background: #2ea3f2;
+    color: #fff;
+}
+
+.required:after{
+    content: "*";
+    color: red;
+}
+
+.modal-content {
+    border: 6px solid #090983;
+}
+
+input.form-control {
+    border: 1px solid #2ea3f2;
+    border-radius: 5px;
+}
+
+select#exampleFormControlSelect1 {
+    border: 1px solid #2ea3f2;
+}
+
+textarea.form-control {
+    border: 1px solid #2ea3f2;
+}
