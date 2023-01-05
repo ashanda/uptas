@@ -107,9 +107,9 @@ get_header();  ?>
             <h3 class="head pb-3">Contact Us For Any Questions</h3>
             <div class="contform_sec mt-3">
               <?php echo do_shortcode('[contact-form-7 id="322" title="Contact Form"]'); ?>
-              <div class="modal-content p-5">
+              <!-- <div class="modal-content p-5">
                 <?php echo do_shortcode('[contact-form-7 id="451" title="Contact_popup"]'); ?>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
