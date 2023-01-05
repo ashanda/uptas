@@ -1570,3 +1570,7 @@ select#exampleFormControlSelect1 {
 textarea.form-control {
     border: 1px solid #2ea3f2;
 }
+
+.bg-warning{
+  background-color: #FFFF00 !important;
+}
