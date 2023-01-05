@@ -4,8 +4,14 @@ Template Name: Shedule
 */
  get_header();  ?>
 <!-- Banner Start -->
-
-<div class="shed_banner">
+<?php
+if (wp_get_attachment_url(get_post_thumbnail_id($post->ID))) {
+    $bannerUrl = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+} else {
+    $bannerUrl = get_field('inner_banner');
+}
+?>
+<div class="shed_banner" style="background-image: url(<?php echo $bannerUrl; ?>);">
     <div class="container-fluid">
       <div class="shed_ban_cap">
         <?php the_field('main_section');?>

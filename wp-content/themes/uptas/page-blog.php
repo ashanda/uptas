@@ -4,8 +4,14 @@ Template Name: Blog Page
 */
 get_header();  ?>
 <!-- Banner Start -->
-
-<div class="sample-banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/inc/img/banner.jpg');">
+<?php
+if (wp_get_attachment_url(get_post_thumbnail_id($post->ID))) {
+    $bannerUrl = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+} else {
+    $bannerUrl = get_field('inner_banner');
+}
+?>
+<div class="sample-banner" style="background-image: url(<?php echo $bannerUrl; ?>);">
   <div class="container text-center">
     <div class="banner-maintext">
       <h2 class="main-heading">Uptas Blog</h2>
