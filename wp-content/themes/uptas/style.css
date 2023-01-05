@@ -1543,14 +1543,19 @@ p.card-text {
     background: #2ea3f2;
     color: #fff;
 }
-
+.contform_btn #submit_button{
+  padding: 2px 10px;
+  background-color: #0070ff;
+  border-color: #0070ff;
+  color: #fff;
+}
 .required:after{
     content: "*";
     color: red;
 }
 
 .modal-content {
-    /* border: 6px solid #090983; */
+    border: 2px solid #0000;
 }
 
 input.form-control {
