@@ -31,7 +31,7 @@ $(".stop").on("click", function () {
 });
 
 
-// asasasasasasasasasasasasasasasasasasas
+// add active on scroll
 
 function section() {
   var sections = document.querySelectorAll(".section");
