@@ -46,7 +46,7 @@
   <header class="main" id="header">
     <div class="container-fluid">
       <!-- start navigation bar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
           <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
             <?php if (get_field('header_logo', 'option')) : ?>
