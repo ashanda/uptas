@@ -1572,6 +1572,9 @@ textarea.form-control {
 }
 
 .bg-warning{
-  background-color: #FFFF00 !important;
-  
+  background-color: #FFFF00 !important; 
+}
+
+.top_slider {
+  margin-top: 100px;
 }
