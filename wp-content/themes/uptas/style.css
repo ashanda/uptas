@@ -1532,49 +1532,58 @@ p.card-text {
   box-shadow: 0px 4px 3px 2px rgba(178, 178, 178, 0.98);
 }
 
-.shed_banner{
+.shed_banner {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 /* /modal/ */
-.modal-header{
-    background: #2ea3f2;
-    color: #fff;
+.modal-header {
+  background: #2ea3f2;
+  color: #fff;
 }
-.contform_btn #submit_button{
+.contform_btn #submit_button {
   padding: 2px 10px;
   background-color: #0070ff;
   border-color: #0070ff;
   color: #fff;
 }
-.required:after{
-    content: "*";
-    color: red;
+.required:after {
+  content: "*";
+  color: red;
 }
 
 .modal-content {
-    border: 2px solid #0000;
+  border: 2px solid #0000;
 }
 
 input.form-control {
-    border: 1px solid #2ea3f2;
-    border-radius: 5px;
+  border: 1px solid #2ea3f2;
+  border-radius: 5px;
 }
 
 select#exampleFormControlSelect1 {
-    border: 1px solid #2ea3f2;
+  border: 1px solid #2ea3f2;
 }
 
 textarea.form-control {
-    border: 1px solid #2ea3f2;
+  border: 1px solid #2ea3f2;
 }
 
-.bg-warning{
-  background-color: #FFFF00 !important; 
+.bg-warning {
+  background-color: #ffff00 !important;
 }
 
 .top_slider {
   margin-top: 100px;
+}
+
+.navbar-nav li:last-child {
+  background-color: #FF8C00;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+.navbar-nav li:last-child a{
+  color: #fff !important;
 }
