@@ -31,25 +31,6 @@ $(".stop").on("click", function () {
 });
 
 
-// add active on scroll
-
-function section() {
-  var sections = document.querySelectorAll(".section");
-
-  for (var i = 0; i < sections.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = sections[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      sections[i].classList.add("active");
-    } else {
-      sections[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", section);
 
 
 // override google review secrion styles
