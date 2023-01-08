@@ -1580,10 +1580,20 @@ textarea.form-control {
 }
 
 .navbar-nav li:last-child {
-  background-color: #FF8C00;
+  background-color: #ff8c00;
   border-radius: 20px;
   padding: 0 10px;
 }
-.navbar-nav li:last-child a{
+.navbar-nav li:last-child a {
   color: #fff !important;
+}
+.col-lg-3.form_col {
+  background-color: #173ead;
+}
+
+@media screen and (max-width: 1380px) {
+  .top_form .form h2 {
+    font-size: 50px;
+    line-height: 64px;
+  }
 }
