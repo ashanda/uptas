@@ -35,7 +35,7 @@ get_header();  ?>
                             feedback to students and spot on their difficulties. In this
                             manner, every class is highly efficient and productive for the
                             students.
-</h5>
+                        </h5>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -123,8 +123,123 @@ get_header();  ?>
                     <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/inc/img/tour-009.jpg" alt="">
                 </div>
             </div>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/inc/img/tour-010.jpg" alt="">
+                </div>
+                <div class="col-md-8 bg-purple p-4">
+                    <h2 class="text-light mb-3 fw-bold">Booster Class (FOC) For students to catch up earlier chapters
+                    </h2>
+                    <h5 class="text-light fw-bold">Booster class is a special revision class that we have created
+                        which will be held once per week catered for all existing
+                        students to catch up earlier contents or misconception that
+                        they may have missed. The best part is the class is FOC (Free
+                        of Charge) for all existing students.</h5>
+                </div>
+
+            </div>
+            <div class="row mt-4">
+                <div class="col-sm-6">
+                    <img class="img-fluid w-100" src="<?php echo get_template_directory_uri(); ?>/inc/img/tour-007.jpg" alt="">
+                </div>
+                <div class="col-sm-6 p-4">
+                    <h2 class="text-purple mb-3 fw-bold">Chemistry can be interesting!</h2>
+                    <p>
+                        Everyone knows how difficult to memorise facts and
+                        formulae from lecture books. At Uptas Learning, students are
+                        shown the wonders of Chemistry and begin their journey of
+                        further discovery. Students will be able visualize chemistry
+                        in real life and science coming alive.
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-sm-6 p-4">
+                    <h2 class="text-purple mb-3 fw-bold">Mastery Skill Level Practices</h2>
+                    <p>
+                        We understand every students have different needs and so
+                        we created 3 different levels of problem solving questions
+                        namely: Skill Level 1, 2 and 3. Skill level 1 are easy-medium
+                        difficult types of questions for students to polish their
+                        basic, skill level 2 will be focusing on higher order thinking
+                        questions (Medium-Difficult questions) and skill level 3
+                        (Oh, My God! Level). This level is catered for students who
+                        wants the most difficult types of questions.
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <img class="img-fluid w-100" src="<?php echo get_template_directory_uri(); ?>/inc/img/tour-008.jpg" alt="">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-sm-6">
+                    <img class="img-fluid w-100 mb-3" src="<?php echo get_template_directory_uri(); ?>/inc/img/tour-014.jpg" alt="">
+                    <img class="img-fluid w-100 mb-3" src="<?php echo get_template_directory_uri(); ?>/inc/img/tour-013.jpg" alt="">
+                </div>
+                <div class="col-sm-6 p-4">
+                    <h2 class="text-purple mb-3 fw-bold">Harnessing on Technology to
+
+                        Enhance Learning Experience</h2>
+                    <p>
+                        By leveraging on computer simulations and videos, Dr Aw is
+                        able to bring across challenging topics in a better visualised
+                        manner. In this manner, the key concept is better understood
+                        and what used to take 30 mins or more to understand in school,
+                        we are confident to simplified and explain in just a couple of
+                        minutes with deeper understanding.
+
+                        <br><br>
+                        Dr Aw replaced whiteboard markers with his Ipad. This allows a
+                        smooth flow of presentations and dynamically changes colour
+                        and highlight key concepts to students.
+                        <br><br>
+
+                        And we also using virtual lab environment to simulate
+                        experimental procedures where students are able to visualize
+                        and capture the essence of what is required to do well in their
+                        practical examinations.
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-sm-6">
+                    <img class="img-fluid w-100 mb-3" src="<?php echo get_template_directory_uri(); ?>/inc/img/notes.jpg" alt="">
+                    <h2 class="text-purple mb-3 fw-bold">
+                        Mind-map, Booster Worksheet
+
+                        and Exam Preparations
+                    </h2>
+                    <p>Dr Aw provides not just worksheets, but high quality topnotched notes, summaries, mindmaps to help every individual
+                        students attain their true maximum potential</p>
+                </div>
+                <div class="col-sm-6">
+                    <img class="img-fluid w-100 mb-3" src="<?php echo get_template_directory_uri(); ?>/inc/img/Ultimate-bible-notes.jpg" alt="">
+                    <h2 class="text-purple mb-3 fw-bold">
+                        Unrival Notes and Cheat Sheets
+                    </h2>
+                    <p>In Uptas Learning Hub, we understand students may have
+                        different needs and learning style. So we also have created a
+                        set of chemistry bible notes that summarized effectively and
+                        concisely the entire syllabus of chemistry for IP’, O , and A
+                        level with all the essential keywords and most frequently asked
+                        exam questions</p>
+                </div>
+            </div>
+            <!-- TESTIMONIALS section -->
+            <?php get_template_part('testimonials'); ?>
+            <!-- TESTIMONIALS section -->
+
+            <!--form section  -->
+
         </div>
     </div>
+        <div class="bg-purple">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <?php echo do_shortcode('[contact-form-7 id="130" title="Get a Free Session!"]'); ?>
+                </div>
+            </div>
+        </div>
 </div>
 
 

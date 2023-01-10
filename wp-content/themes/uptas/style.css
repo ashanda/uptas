@@ -1601,6 +1601,9 @@ header#header {
 .bg-purple{
   background-color: #6183e4;
 }
+.text-purple{
+  color: #6183e4;
+}
 .tour_card{
   -webkit-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.42); 
 box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.42);
