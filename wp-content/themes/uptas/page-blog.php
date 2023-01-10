@@ -26,7 +26,7 @@ if (wp_get_attachment_url(get_post_thumbnail_id($post->ID))) {
 <!-- Banner Wrapper End -->
 
 <!--Body Content Wrapper Start-->
-<section class="section-card section">
+<section class="section-card">
   <div class="container p-0">
     <div class="cards">
       <div class="row mt-4 pl-4">
