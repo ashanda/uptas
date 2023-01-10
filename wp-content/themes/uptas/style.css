@@ -1575,10 +1575,9 @@ textarea.form-control {
   background-color: #ffff00 !important;
 }
 
-.top_slider {
-  margin-top: 100px;
+header#header {
+  margin-bottom: 100px;
 }
-
 .navbar-nav li:last-child {
   background-color: #ff8c00;
   border-radius: 20px;
@@ -1596,4 +1595,13 @@ textarea.form-control {
     font-size: 50px;
     line-height: 64px;
   }
+}
+
+/* Tour page css */
+.bg-purple{
+  background-color: #6183e4;
+}
+.tour_card{
+  -webkit-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.42); 
+box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.42);
 }
