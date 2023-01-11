@@ -38,7 +38,7 @@ get_header();  ?>
                     <div class="p-4">
                         <h2 class="text-light mb-3 fw-bold"><?php the_field('element_1_title'); ?></h2>
                         <h5 class="text-light fw-bold">
-                        <?php the_field('element_1_caption'); ?>
+                            <?php the_field('element_1_caption'); ?>
                         </h5>
                     </div>
                 </div>
@@ -53,29 +53,23 @@ get_header();  ?>
                 <div class="col-md-8 bg-purple">
                     <div class="p-4">
                         <h2 class="text-light mb-3 fw-bold"><?php the_field('element_2_title'); ?></h2>
-                        <h5 class="text-light fw-bold"><?php the_field('element_2_caption'); ?>   </h5>
+                        <h5 class="text-light fw-bold"><?php the_field('element_2_caption'); ?> </h5>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 mt-4">
-                    <div class="tour_card p-3">
-                        <img class="img-fluid w-100" src="<?php echo get_template_directory_uri(); ?>/inc/img/tour-003.jpg" alt="">
-                        <h5 class="py-2 fw-bold">Topic: Chemical Bonding</h5>
-                        <p>Every chapter are sorted to concept levels. Through many
-                            years of interactions with students, we have discovered that
-                            the secret to doing well in exam lies in getting the key
-                            concept of the chapter correct.
-                            <br><br>
-                            An analogy will be if focuses are doors, then key concept
-                            will be the keys to the doors where students will see the big
-                            picture of the content. In this manner, we will further break
-                            down each focus point to concept keys where
-                            misconception will be clarified and the door to distinctions
-                            will be opened.
-                        </p>
-                    </div>
-                </div>
+                <?php if (have_rows('tour_cards')) : ?>
+                    <?php while (have_rows('tour_cards')) : the_row(); ?>
+                        <div class="col-sm-6 mt-4">
+                            <div class="tour_card p-3">
+                                <img class="img-fluid w-100" src="<?php the_sub_field('points'); ?>" alt="">
+                                <h5 class="py-2 fw-bold"><?php the_sub_field('points'); ?></h5>
+                                <p><?php the_sub_field('points'); ?>
+                                </p>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
                 <div class="col-sm-6 mt-4">
                     <div class="tour_card p-3">
                         <img class="img-fluid w-100" src="<?php echo get_template_directory_uri(); ?>/inc/img/tour-004.jpg" alt="">
