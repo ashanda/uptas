@@ -11,7 +11,8 @@ get_header();  ?>
             <div class="row">
                 <div class="col-md-6">
                     <div class="img_sec py-4">
-                        <img class="img-fluid w-100" src="<?php echo get_template_directory_uri(); ?>/inc/img/chemistry-tuition-improvement.jpg" alt="">
+                        <!-- <img class="img-fluid w-100" src="<?php echo get_template_directory_uri(); ?>/inc/img/chemistry-tuition-improvement.jpg" alt=""> -->
+                        <img class="img-fluid w-100" src="<?php the_field('hero_section_image'); ?>" alt="">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -35,37 +36,24 @@ get_header();  ?>
             <div class="row">
                 <div class="col-md-8 bg-purple">
                     <div class="p-4">
-                        <h2 class="text-light mb-3 fw-bold">Be Coached by the Best</h2>
+                        <h2 class="text-light mb-3 fw-bold"><?php the_field('element_1_title'); ?></h2>
                         <h5 class="text-light fw-bold">
-                            Tutor Factor- With more than 10 years of teaching experience in
-                            both MOE schools and University, Dr Aw and Miss Tham had
-                            worked with a wide spectrum of students, ranging from
-                            those who are gifted in Chemistry to those who hated
-                            Chemistry. Dr Aw explain concepts to students in a simplified
-                            manner. Armed with years of experience and familiarity with
-                            common gaps faced by students, he is able to give accurate
-                            feedback to students and spot on their difficulties. In this
-                            manner, every class is highly efficient and productive for the
-                            students.
+                        <?php the_field('element_1_caption'); ?>
                         </h5>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/inc/img/tour-001.jpg" alt="">
+                    <img class="img-fluid" src="<?php the_field('element_1_image'); ?>" alt="">
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-md-4">
-                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/inc/img/tour-002.jpg" alt="">
+                    <img class="img-fluid" src="<?php the_field('element_2_image'); ?>" alt="">
                 </div>
                 <div class="col-md-8 bg-purple">
                     <div class="p-4">
-                        <h2 class="text-light mb-3 fw-bold">Study chemistry sometimes can
-                            be a MAZE</h2>
-                        <h5 class="text-light fw-bold">Dr Aw simplify all chapters of the syllabus into cookie,
-                            bite size. With crystal clear explanations, research proven
-                            teaching methods, top-notched teaching materials,
-                            learning Chemistry had never been easier</h5>
+                        <h2 class="text-light mb-3 fw-bold"><?php the_field('element_2_title'); ?></h2>
+                        <h5 class="text-light fw-bold"><?php the_field('element_2_caption'); ?>   </h5>
                     </div>
                 </div>
             </div>
