@@ -11,8 +11,7 @@ get_header();  ?>
             <div class="row">
                 <div class="col-md-6">
                     <div class="img_sec py-4">
-                        <!-- <img class="img-fluid w-100" src="<?php echo get_template_directory_uri(); ?>/inc/img/chemistry-tuition-improvement.jpg" alt=""> -->
-                        <img class="img-fluid w-100" src="<?php the_field('hero_section_image'); ?>" alt="">
+                        <img class="img-fluid w-100 hover-fade" src="<?php the_field('hero_section_image'); ?>" alt="">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -33,7 +32,7 @@ get_header();  ?>
             </div>
         </div>
         <div class="mid_sec">
-            <div class="row">
+            <div class="row section">
                 <div class="col-md-8 bg-purple">
                     <div class="p-4">
                         <h2 class="text-light mb-3 fw-bold"><?php the_field('element_1_title'); ?></h2>
@@ -46,7 +45,7 @@ get_header();  ?>
                     <img class="img-fluid" src="<?php the_field('element_1_image'); ?>" alt="">
                 </div>
             </div>
-            <div class="row mt-3">
+            <div class="row mt-3 section">
                 <div class="col-md-4">
                     <img class="img-fluid" src="<?php the_field('element_2_image'); ?>" alt="">
                 </div>
@@ -57,12 +56,12 @@ get_header();  ?>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row section">
                 <?php if (have_rows('tour_cards')) : ?>
                     <?php while (have_rows('tour_cards')) : the_row(); ?>
                         <div class="col-sm-6 mt-4">
                             <div class="tour_card p-3">
-                                <img class="img-fluid w-100" src="<?php the_sub_field('image'); ?>" alt="">
+                                <img class="img-fluid w-100 hover-fade" src="<?php the_sub_field('image'); ?>" alt="">
                                 <h5 class="py-2 fw-bold"><?php the_sub_field('title'); ?></h5>
                                 <p><?php the_sub_field('caption'); ?>
                                 </p>
@@ -71,7 +70,7 @@ get_header();  ?>
                     <?php endwhile; ?>
                 <?php endif; ?>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-5 section">
                 <div class="col-md-8 bg-purple p-4">
                     <h2 class="text-light mb-3 fw-bold"><?php the_field('element_3_title'); ?></h2>
                     <h5 class="text-light fw-bold"><?php the_field('element_3_caption'); ?></h5>
@@ -80,7 +79,7 @@ get_header();  ?>
                     <img class="img-fluid" src="<?php the_field('element_3_image'); ?>" alt="">
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-5 section">
                 <div class="col-md-4">
                     <img class="img-fluid" src="<?php the_field('element_4_image'); ?>" alt="">
                 </div>
@@ -90,7 +89,7 @@ get_header();  ?>
                 </div>
 
             </div>
-            <div class="row mt-4">
+            <div class="row mt-4 section">
                 <div class="col-sm-6">
                     <img class="img-fluid w-100" src="<?php the_field('element_5_image'); ?>" alt="">
                 </div>
@@ -101,7 +100,7 @@ get_header();  ?>
                     </p>
                 </div>
             </div>
-            <div class="row mt-4">
+            <div class="row mt-4 section">
                 <div class="col-sm-6 p-4">
                     <h2 class="text-purple mb-3 fw-bold"><?php the_field('element_6_title'); ?></h2>
                     <p>
@@ -112,7 +111,7 @@ get_header();  ?>
                     <img class="img-fluid w-100" src="<?php the_field('element_6_image'); ?>" alt="">
                 </div>
             </div>
-            <div class="row mt-4">
+            <div class="row mt-4 section">
                 <div class="col-sm-6">
                     <img class="img-fluid w-100 mb-3" src="<?php the_field('element_7_image'); ?>" alt="">
                     <img class="img-fluid w-100 mb-3" src="<?php the_field('element_7_image_2'); ?>" alt="">
@@ -124,11 +123,11 @@ get_header();  ?>
                     </p>
                 </div>
             </div>
-            <div class="row mt-4">
+            <div class="row mt-4 section">
                 <?php if (have_rows('tour_posts')) : ?>
                     <?php while (have_rows('tour_posts')) : the_row(); ?>
                         <div class="col-sm-6">
-                            <img class="img-fluid w-100 mb-3" src="<?php the_sub_field('image'); ?>" alt="">
+                            <img class="img-fluid w-100 mb-3 hover-fade" src="<?php the_sub_field('image'); ?>" alt="">
                             <h2 class="text-purple mb-3 fw-bold"><?php the_sub_field('title'); ?></h2>
                             <p><?php the_sub_field('caption'); ?></p>
                         </div>
@@ -143,7 +142,7 @@ get_header();  ?>
 
         </div>
     </div>
-    <div class="bg-purple">
+    <div class="bg-purple section">
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <div class="top_form">

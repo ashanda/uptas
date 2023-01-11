@@ -1612,3 +1612,10 @@ header#header {
   background-color: #ff8c00;
   padding: 0 10px;
 }
+.hover-fade{
+  transition-duration: 0.5s;
+  opacity: 1;
+}
+.hover-fade:hover{
+  opacity: 0.7;
+}
