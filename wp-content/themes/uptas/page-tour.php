@@ -15,7 +15,19 @@ get_header();  ?>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <?php echo do_shortcode('[contact-form-7 id="130" title="Get a Free Session!"]'); ?>
+                    <div class="top_form">
+                        <div class="form">
+                            <h2><?php the_field('section_05_form_title'); ?></h2>
+                            <p class="py-3">
+                                <?php the_field('section_05_form_description'); ?>
+                            </p>
+
+                            <?php echo do_shortcode('[contact-form-7 id="130" title="Get a Free Session!"]'); ?>
+                            <p class="last-des">
+                                <?php the_field('section_05_form_agree_text'); ?>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -233,13 +245,24 @@ get_header();  ?>
 
         </div>
     </div>
-        <div class="bg-purple">
-            <div class="row">
-                <div class="col-md-6 mx-auto">
-                    <?php echo do_shortcode('[contact-form-7 id="130" title="Get a Free Session!"]'); ?>
+    <div class="bg-purple">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="top_form">
+                    <div class="form">
+                        <h2><?php the_field('section_05_form_title'); ?></h2>
+                        <p class="py-3">
+                            <?php the_field('section_05_form_description'); ?>
+                        </p>
+                        <?php echo do_shortcode('[contact-form-7 id="130" title="Get a Free Session!"]'); ?>
+                        <p class="last-des">
+                            <?php the_field('section_05_form_agree_text'); ?>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 </div>
 
 
