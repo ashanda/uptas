@@ -17,14 +17,14 @@ get_header();  ?>
                 <div class="col-md-6">
                     <div class="top_form">
                         <div class="form">
-                            <h2><?php the_field('section_05_form_title'); ?></h2>
+                            <h2><?php the_field('form_title'); ?></h2>
                             <p class="py-3">
-                                <?php the_field('section_05_form_description'); ?>
+                                <?php the_field('form_description'); ?>
                             </p>
 
                             <?php echo do_shortcode('[contact-form-7 id="130" title="Get a Free Session!"]'); ?>
                             <p class="last-des">
-                                <?php the_field('section_05_form_agree_text'); ?>
+                                I consent to the prossing of pertinal data and agree with the user agreement and privacy policy.
                             </p>
                         </div>
                     </div>
@@ -250,13 +250,13 @@ get_header();  ?>
             <div class="col-md-6 mx-auto">
                 <div class="top_form">
                     <div class="form">
-                        <h2><?php the_field('section_05_form_title'); ?></h2>
+                        <h2><?php the_field('form_title'); ?></h2>
                         <p class="py-3">
-                            <?php the_field('section_05_form_description'); ?>
+                            <?php the_field('form_description'); ?>
                         </p>
                         <?php echo do_shortcode('[contact-form-7 id="130" title="Get a Free Session!"]'); ?>
                         <p class="last-des">
-                            <?php the_field('section_05_form_agree_text'); ?>
+                            I consent to the prossing of pertinal data and agree with the user agreement and privacy policy.
                         </p>
                     </div>
                 </div>
