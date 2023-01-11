@@ -7,21 +7,7 @@ get_header();  ?>
 <!-- Banner Slider Start -->
 <div class="top_slider">
   <div class="row ">
-    <div class="col-lg-3 form_col">
-      <div class="top_form">
-        <div class="form">
-          <h2><?php the_field('section_05_form_title'); ?></h2>
-          <p class="py-3">
-            <?php the_field('section_05_form_description'); ?>
-          </p>
 
-          <?php echo do_shortcode('[contact-form-7 id="130" title="Get a Free Session!"]'); ?>
-          <p class="last-des">
-            <?php the_field('section_05_form_agree_text'); ?>
-          </p>
-        </div>
-      </div>
-    </div>
     <div class="col-lg-9 slider_col">
       <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -46,9 +32,15 @@ get_header();  ?>
               <div class="carousel-item <?php echo $active; ?>" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('<?php echo $image['url']; ?>')">
                 <img src="<?php echo $image['url']; ?>" class="d-block" alt="..." />
                 <div class="carousel-caption d-block container">
-                  <h6><?php the_sub_field('sub_title'); ?></h6>
-                  <h1><?php the_sub_field('main_title'); ?></h1>
-                  <p><?php the_sub_field('description'); ?></p>
+                  <h6>
+                    <?php the_sub_field('sub_title'); ?>
+                  </h6>
+                  <h1>
+                    <?php the_sub_field('main_title'); ?>
+                  </h1>
+                  <p>
+                    <?php the_sub_field('description'); ?>
+                  </p>
                 </div>
               </div>
             <?php
@@ -65,6 +57,23 @@ get_header();  ?>
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
+      </div>
+    </div>
+    <div class="col-lg-3 form_col">
+      <div class="top_form">
+        <div class="form">
+          <h2>
+            <?php the_field('section_05_form_title'); ?>
+          </h2>
+          <p class="py-3">
+            <?php the_field('section_05_form_description'); ?>
+          </p>
+
+          <?php echo do_shortcode('[contact-form-7 id="130" title="Get a Free Session!"]'); ?>
+          <p class="last-des">
+            <?php the_field('section_05_form_agree_text'); ?>
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -85,7 +94,9 @@ get_header();  ?>
           <?php while (have_rows('banner_bottom_cards')) : the_row(); ?>
             <div class="card card<?php echo $i; ?>">
               <div class="card-body">
-                <h5 class="card-title"><?php the_sub_field('title'); ?></h5>
+                <h5 class="card-title">
+                  <?php the_sub_field('title'); ?>
+                </h5>
                 <p class="card-text">
                   <?php the_sub_field('caption'); ?>
                 </p>
@@ -106,8 +117,12 @@ get_header();  ?>
 <div class="learning section" id="learning">
   <div class="container">
     <div class="learning-heading text-center">
-      <h4><?php the_field('section_01_sub_title'); ?></h4>
-      <h2><?php the_field('section_01_title'); ?></h2>
+      <h4>
+        <?php the_field('section_01_sub_title'); ?>
+      </h4>
+      <h2>
+        <?php the_field('section_01_title'); ?>
+      </h2>
       <div id="borderLeft"></div>
     </div>
     <div class="row">
@@ -119,7 +134,9 @@ get_header();  ?>
             <div class="learning-content">
               <h2>
                 <!-- 0<?php echo $i; ?>.  -->
-                <span><?php the_sub_field('title'); ?></span>
+                <span>
+                  <?php the_sub_field('title'); ?>
+                </span>
               </h2>
             </div>
             <p class="sub-content">
@@ -144,8 +161,12 @@ get_header();  ?>
     <div class="row mt-4">
       <div class="col-sm-6">
         <div class="work-details">
-          <h4><?php the_field('section_01_sub_section_sub_title'); ?></h4>
-          <h2><?php the_field('section_01_sub_section_title'); ?></h2>
+          <h4>
+            <?php the_field('section_01_sub_section_sub_title'); ?>
+          </h4>
+          <h2>
+            <?php the_field('section_01_sub_section_title'); ?>
+          </h2>
           <p>
             <?php the_field('section_01_sub_section_caption'); ?>
           </p>
@@ -154,12 +175,16 @@ get_header();  ?>
         <div class="row mt-3">
           <div class="col-sm-6">
             <div class="individuals">
-              <p class="ind_title"><?php the_field('section_01_sub_section_left_title'); ?>:</p>
+              <p class="ind_title">
+                <?php the_field('section_01_sub_section_left_title'); ?>:
+              </p>
               <?php if (have_rows('key_points_left')) : ?>
                 <?php while (have_rows('key_points_left')) : the_row(); ?>
                   <div class="work-list">
                     <i class="fa fa-check"></i>
-                    <p><?php the_sub_field('points'); ?></p>
+                    <p>
+                      <?php the_sub_field('points'); ?>
+                    </p>
                   </div>
                 <?php endwhile; ?>
               <?php endif; ?>
@@ -168,12 +193,16 @@ get_header();  ?>
 
           <div class="col-sm-6">
             <div class="group">
-              <p class="ind_title"><?php the_field('section_01_sub_section_right_title'); ?>:</p>
+              <p class="ind_title">
+                <?php the_field('section_01_sub_section_right_title'); ?>:
+              </p>
               <?php if (have_rows('key_points_right')) : ?>
                 <?php while (have_rows('key_points_right')) : the_row(); ?>
                   <div class="work-list">
                     <i class="fa fa-check"></i>
-                    <p><?php the_sub_field('points'); ?></p>
+                    <p>
+                      <?php the_sub_field('points'); ?>
+                    </p>
                   </div>
                 <?php endwhile; ?>
               <?php endif; ?>
@@ -212,33 +241,35 @@ get_header();  ?>
 
       <div class="qualities-right mt-4">
         <div class="row">
-        <?php if (have_rows('qulities')) : ?>
-          <?php while (have_rows('qulities')) : the_row();
-            $image = get_sub_field('image');
-          ?>
-          
-            <div class="col-sm-12 col-md-6">
-            <div class="sub-content pb-4">
-              <div class="row">
-                <div class="col-sm-3">
-                  <div class="image text-center">
-                    <img class="img-fluid" src="<?php echo $image['url']; ?>" alt="" />
-                  </div>
-                </div>
-                <div class="col-sm-9">
-                  <div class="details">
-                    <h4><?php the_sub_field('title'); ?></h4>
-                    <p>
-                      <?php the_sub_field('caption'); ?>
-                    </p>
+          <?php if (have_rows('qulities')) : ?>
+            <?php while (have_rows('qulities')) : the_row();
+              $image = get_sub_field('image');
+            ?>
+
+              <div class="col-sm-12 col-md-6">
+                <div class="sub-content pb-4">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="image text-center">
+                        <img class="img-fluid" src="<?php echo $image['url']; ?>" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="details">
+                        <h4>
+                          <?php the_sub_field('title'); ?>
+                        </h4>
+                        <p>
+                          <?php the_sub_field('caption'); ?>
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            </div>      
-            
-          <?php endwhile; ?>
-        <?php endif; ?>
+
+            <?php endwhile; ?>
+          <?php endif; ?>
         </div>
       </div>
 
@@ -254,8 +285,12 @@ get_header();  ?>
       <div class="question-area">
         <div class="row">
           <div class="col-sm-7">
-            <h2><?php the_field('section_03_title'); ?></h2>
-            <p><?php the_field('section_03_description'); ?></p>
+            <h2>
+              <?php the_field('section_03_title'); ?>
+            </h2>
+            <p>
+              <?php the_field('section_03_description'); ?>
+            </p>
           </div>
           <div class="col-sm-5">
             <?php echo do_shortcode('[contact-form-7 id="109" title="GET CONSULT"]'); ?>
@@ -273,13 +308,19 @@ get_header();  ?>
     <div class="row">
       <div class="col-sm-6">
         <div class="tutor-des">
-          <h3><?php the_field('section_04_sub_title'); ?></h3>
-          <h5><?php the_field('section_04_title'); ?></h5>
+          <h3>
+            <?php the_field('section_04_sub_title'); ?>
+          </h3>
+          <h5>
+            <?php the_field('section_04_title'); ?>
+          </h5>
           <div id="borderbottom"></div>
           <p>
             <?php the_field('section_04_description'); ?>
           </p>
-          <a class="btn btn-primary mt-2" href="<?php the_field('section_04_button_link'); ?>"> <?php the_field('section_04_button_text'); ?> </a>
+          <a class="btn btn-primary mt-2" href="<?php the_field('section_04_button_link'); ?>">
+            <?php the_field('section_04_button_text'); ?>
+          </a>
         </div>
       </div>
 
@@ -302,7 +343,9 @@ get_header();  ?>
       <div class="col-sm-5">
         <div class="form_sec-description">
           <div class="form_sec-content">
-            <h2><?php the_field('section_05_title'); ?></h2>
+            <h2>
+              <?php the_field('section_05_title'); ?>
+            </h2>
             <p class="description text-dark">
               <?php the_field('section_05_description'); ?>
             </p>
@@ -315,8 +358,12 @@ get_header();  ?>
               ?>
                 <?php while (have_rows('key')) : the_row(); ?>
                   <p>
-                    <span class="bl_num"><?php echo $i; ?>.</span>
-                    <span class="bl_txt"><?php the_sub_field('points'); ?></span>
+                    <span class="bl_num">
+                      <?php echo $i; ?>.
+                    </span>
+                    <span class="bl_txt">
+                      <?php the_sub_field('points'); ?>
+                    </span>
                   </p>
                 <?php
                   $i++;
@@ -339,7 +386,9 @@ get_header();  ?>
             </div>
             <div class="col-sm-7">
               <div class="form">
-                <h2><?php the_field('section_05_form_title'); ?></h2>
+                <h2>
+                  <?php the_field('section_05_form_title'); ?>
+                </h2>
                 <p class="py-3">
                   <?php the_field('section_05_form_description'); ?>
                 </p>
