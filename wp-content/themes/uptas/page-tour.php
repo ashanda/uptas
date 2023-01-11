@@ -11,7 +11,7 @@ get_header();  ?>
             <div class="row">
                 <div class="col-md-6">
                     <div class="img_sec py-4">
-                        <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/inc/img/chemistry-tuition-improvement.jpg" alt="">
+                        <img class="img-fluid w-100" src="<?php echo get_template_directory_uri(); ?>/inc/img/chemistry-tuition-improvement.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-md-6">
