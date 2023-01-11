@@ -62,9 +62,9 @@ get_header();  ?>
                     <?php while (have_rows('tour_cards')) : the_row(); ?>
                         <div class="col-sm-6 mt-4">
                             <div class="tour_card p-3">
-                                <img class="img-fluid w-100" src="<?php the_sub_field('points'); ?>" alt="">
-                                <h5 class="py-2 fw-bold"><?php the_sub_field('points'); ?></h5>
-                                <p><?php the_sub_field('points'); ?>
+                                <img class="img-fluid w-100" src="<?php the_sub_field('image'); ?>" alt="">
+                                <h5 class="py-2 fw-bold"><?php the_sub_field('title'); ?></h5>
+                                <p><?php the_sub_field('caption'); ?>
                                 </p>
                             </div>
                         </div>
