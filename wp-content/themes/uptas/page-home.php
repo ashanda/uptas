@@ -131,8 +131,8 @@ get_header();  ?>
         endwhile; ?>
       <?php endif; ?>
     </div>
-    <div class="tour_btn mt-2 mb-4">
-      <a class="tbtn" href="<?php echo get_home_url(); ?>/tour">Visit Tour Page</a>
+    <div class="tour_btn mt-2 mb-4 text-center">
+      <a class="tbtn text-light py-2 mx-4" href="<?php echo get_home_url(); ?>/tour">Visit Tour Page</a>
     </div>
   </div>
 </div>

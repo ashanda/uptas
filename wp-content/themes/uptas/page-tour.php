@@ -7,7 +7,7 @@ get_header();  ?>
 <!-- we are secion -->
 <div class="tour_sec">
     <div class="container">
-        <div class="frm">
+        <div class="frm my-4">
             <div class="row">
                 <div class="col-md-6">
                     <div class="img_sec py-4">
